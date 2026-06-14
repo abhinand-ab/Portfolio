@@ -17,13 +17,12 @@ function App() {
         </h1>
 
         <h2 className="text-2xl md:text-4xl text-muted-foreground mb-8">
-          MERN Stack Developer
+          Full-Stack Developer
+          React • Node.js • Express • MongoDB
         </h2>
 
         <p className="max-w-2xl text-lg text-muted-foreground leading-8 mb-10">
-          I am a passionate Full-Stack Developer with experience in designing, developing, and deploying modern web applications. I enjoy building scalable, user-friendly, and responsive solutions using technologies such as React.js, Node.js, Express.js, MongoDB, JavaScript, and Python.
-          My experience includes developing full-stack applications, designing RESTful APIs, implementing authentication and authorization systems, managing databases, and deploying applications to cloud platforms. I am continuously learning new technologies and best practices to create efficient, secure, and impactful software solutions.
-          I am currently seeking opportunities to apply my technical skills, contribute to real-world projects, and grow as a software developer while delivering meaningful user experiences.
+          Full-Stack Developer passionate about building modern, scalable, and user-friendly web applications. Experienced in React.js, Node.js, Express.js, MongoDB, REST APIs, and cloud deployment, with a strong focus on creating impactful digital solutions and continuous learning.
 
         </p>
 
