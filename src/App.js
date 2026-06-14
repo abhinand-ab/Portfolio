@@ -16,14 +16,13 @@ function App() {
           Hi, I'm Abhinand T V
         </h1>
 
-        <h2 className="text-2xl md:text-4xl text-muted-foreground mb-4">
-             Full-Stack Developer
-        </h2>
-
-          <p className="text-lg md:text-xl text-primary mb-8">
-             React • Node.js • Express • MongoDB
-          </p>
-
+        <h2 className="text-2xl md:text-4xl text-muted-foreground mb-8">
+            Full-Stack Developer
+           <br />
+               <span className="text-lg md:text-2xl">
+                 React • Node.js • Express • MongoDB
+               </span>
+          </h2>
         <p className="max-w-2xl text-lg text-muted-foreground leading-8 mb-10">
           Full-Stack Developer passionate about building modern, scalable, and user-friendly web applications. Experienced in React.js, Node.js, Express.js, MongoDB, REST APIs, and cloud deployment, with a strong focus on creating impactful digital solutions and continuous learning.
 
