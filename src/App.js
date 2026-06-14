@@ -21,10 +21,10 @@ function App() {
         </h2>
 
         <p className="max-w-2xl text-lg text-muted-foreground leading-8 mb-10">
-          I build modern full-stack web applications using React.js,
-          Node.js, Express.js, and MongoDB.
-          Passionate about creating responsive and user-friendly
-          digital experiences.
+          I am a passionate Full-Stack Developer with experience in designing, developing, and deploying modern web applications. I enjoy building scalable, user-friendly, and responsive solutions using technologies such as React.js, Node.js, Express.js, MongoDB, JavaScript, and Python.
+          My experience includes developing full-stack applications, designing RESTful APIs, implementing authentication and authorization systems, managing databases, and deploying applications to cloud platforms. I am continuously learning new technologies and best practices to create efficient, secure, and impactful software solutions.
+          I am currently seeking opportunities to apply my technical skills, contribute to real-world projects, and grow as a software developer while delivering meaningful user experiences.
+
         </p>
 
         <div className="flex gap-5 flex-wrap justify-center">
@@ -66,8 +66,7 @@ function App() {
             Tailwind CSS, and deployment platforms like
             Vercel and Render.
 
-            I recently developed a full-stack Blood Donation System
-            with complete CRUD operations and cloud deployment.
+            
 
           </p>
 
@@ -140,6 +139,71 @@ function App() {
           <div className="grid md:grid-cols-2 gap-10">
 
 
+            {/* AI FITNESS TRACKER */}
+
+            <div className="bg-background rounded-3xl p-8 shadow-card hover:scale-[1.02] transition-all duration-300">
+
+              <h3 className="text-3xl font-bold mb-4">
+                AI Fitness Tracker
+              </h3>
+
+              <p className="text-muted-foreground leading-8 mb-6">
+
+                A full-stack fitness tracking application built using the MERN stack.
+                Features secure JWT authentication, workout CRUD operations,
+                BMI and calorie analysis, progress analytics, interactive charts,
+                MongoDB Atlas integration, and cloud deployment using Render and Vercel.
+
+              </p>
+
+              <div className="flex flex-wrap gap-3 mb-8">
+
+                {[
+                  "React.js",
+                  "Node.js",
+                  "Express.js",
+                  "MongoDB",
+                  "JWT",
+                  "Tailwind CSS",
+                  "Recharts",
+                  "REST API",
+                ].map((tech) => (
+
+                  <span
+                    key={tech}
+                    className="bg-primary px-4 py-2 rounded-full text-sm"
+                  >
+                    {tech}
+                  </span>
+
+                ))}
+
+              </div>
+
+              <div className="flex flex-wrap gap-5">
+
+                <a
+                  href="https://ai-fitness-black.vercel.app"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="bg-primary text-primary-foreground px-6 py-3 rounded-xl shadow-glow hover:scale-105 transition-all duration-300"
+                >
+                  Live Demo
+                </a>
+
+                <a
+                  href="https://github.com/abhinand-ab/AI-FITNESS"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="border border-border px-6 py-3 rounded-xl hover:bg-muted transition-all duration-300"
+                >
+                  GitHub
+                </a>
+
+              </div>
+
+            </div>
+
             {/* BLOOD DONATION SYSTEM */}
 
             <div className="bg-background rounded-3xl p-8 shadow-card hover:scale-[1.02] transition-all duration-300">
@@ -194,6 +258,70 @@ function App() {
 
                 <a
                   href="https://github.com/abhinand-ab/blood-donation-system"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="border border-border px-6 py-3 rounded-xl hover:bg-muted transition-all duration-300"
+                >
+                  GitHub
+                </a>
+
+              </div>
+
+            </div>
+
+
+            {/* WEATHER DASHBOARD */}
+
+            <div className="bg-background rounded-3xl p-8 shadow-card hover:scale-[1.02] transition-all duration-300">
+
+              <h3 className="text-3xl font-bold mb-4">
+                Weather Dashboard
+              </h3>
+
+              <p className="text-muted-foreground leading-8 mb-6">
+
+                A responsive weather forecasting application that provides
+                real-time weather conditions, temperature, humidity,
+                wind speed, and forecast data using weather APIs.
+                Designed with a modern UI and optimized user experience.
+
+              </p>
+
+              <div className="flex flex-wrap gap-3 mb-8">
+
+                {[
+                  "React.js",
+                  "JavaScript",
+                  "Weather API",
+                  "REST API",
+                  "CSS",
+                  "Responsive Design",
+                ].map((tech) => (
+
+                  <span
+                    key={tech}
+                    className="bg-primary px-4 py-2 rounded-full text-sm"
+                  >
+                    {tech}
+                  </span>
+
+                ))}
+
+              </div>
+
+              <div className="flex flex-wrap gap-5">
+
+                <a
+                  href="https://weather-dashboard-ten-tan.vercel.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="bg-primary text-primary-foreground px-6 py-3 rounded-xl shadow-glow hover:scale-105 transition-all duration-300"
+                >
+                  Live Demo
+                </a>
+
+                <a
+                  href="https://github.com/abhinand-ab/Weather_Dashboard.git"
                   target="_blank"
                   rel="noreferrer"
                   className="border border-border px-6 py-3 rounded-xl hover:bg-muted transition-all duration-300"
