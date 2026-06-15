@@ -292,7 +292,6 @@ function App() {
               <div className="flex flex-wrap gap-3 mb-8">
 
                 {[
-                  "React.js",
                   "JavaScript",
                   "Weather API",
                   "REST API",
