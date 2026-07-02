@@ -6,47 +6,47 @@
 
   --radius: 0.75rem;
 
-  /* Midnight Indigo Theme */
+  /* Light theme */
 
-  --background: #0f172a;
-  --foreground: #f8fafc;
+  --background: #f8fafc;
+  --foreground: #0f172a;
 
-  --card: #1e293b;
-  --card-foreground: #f8fafc;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
 
-  --muted: #334155;
-  --muted-foreground: #cbd5e1;
+  --muted: #e2e8f0;
+  --muted-foreground: #475569;
 
-  --primary: #8b5cf6;
+  --primary: #2563eb;
   --primary-foreground: #ffffff;
 
-  --accent: #7c3aed;
+  --accent: #1d4ed8;
   --accent-foreground: #ffffff;
 
-  --border: rgba(255,255,255,0.1);
+  --border: rgba(148,163,184,0.28);
 
   --gradient-hero:
     radial-gradient(circle at top,
-      rgba(139,92,246,0.3),
-      transparent 60%),
+      rgba(37,99,235,0.16),
+      transparent 55%),
     linear-gradient(
       180deg,
-      #020617,
-      #0f172a
+      #eff6ff,
+      #f8fafc
     );
 
   --gradient-text:
     linear-gradient(
       135deg,
-      #ffffff,
-      #a78bfa
+      #0f172a,
+      #2563eb
     );
 
   --shadow-glow:
-    0 20px 60px -20px rgba(139,92,246,0.6);
+    0 20px 60px -20px rgba(37,99,235,0.32);
 
   --shadow-card:
-    0 10px 40px -10px rgba(0,0,0,0.6);
+    0 10px 40px -10px rgba(15,23,42,0.12);
 }
 
 
@@ -58,6 +58,7 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: light;
 }
 
 body {
@@ -122,7 +123,7 @@ body {
 
   background-image:
     radial-gradient(
-      rgba(255,255,255,0.03) 1px,
+      rgba(15,23,42,0.035) 1px,
       transparent 1px
     );
 
