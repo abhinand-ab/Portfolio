@@ -172,7 +172,7 @@ export default function Hero() {
                     className="lg:col-span-5 flex justify-center items-center relative"
                 >
                     {/* Main Visual Circle */}
-                    <div className="relative w-80 h-80 sm:w-96 sm:h-96 rounded-full border border-cyan-500/10 flex items-center justify-center p-4 bg-gradient-to-tr from-slate-950/60 to-blue-950/20 backdrop-blur-3xl shadow-xl shadow-cyan-950/15 glassmorphism translate-x-8 sm:translate-x-12">
+                    <div className="relative w-80 h-80 sm:w-96 sm:h-96 rounded-full border border-cyan-500/10 flex items-center justify-center p-4 bg-gradient-to-tr from-slate-950/60 to-blue-950/20 backdrop-blur-3xl shadow-xl shadow-cyan-950/15 glassmorphism">
                         {/* Planetary Orbit Paths and Orbiting Particles */}
                         <div className="absolute inset-0 rounded-full border border-cyan-500/10 pointer-events-none">
                             <div className="absolute inset-0 animate-orbit-cw">
@@ -186,8 +186,8 @@ export default function Hero() {
                         </div>
 
                         {/* Displaying some beautiful interactive coding text in a cool editor layout */}
-                        <div className="w-[85%] h-[85%] rounded-[2rem] overflow-hidden bg-slate-950/40 border border-white/5 py-6 pl-14 sm:pl-16 pr-6 flex flex-col justify-center text-xs font-mono text-cyan-300/90 leading-relaxed shadow-inner">
-                            <span className="text-cyan-455 font-bold">const</span> developer = {"{"}
+                        <div className="w-[85%] h-[85%] rounded-full overflow-hidden bg-slate-950/40 border border-white/5 p-6 flex flex-col justify-center text-xs font-mono text-cyan-300/90 leading-relaxed shadow-inner">
+                            <span className="text-cyan-450 font-bold">const</span> developer = {"{"}
                             <div className="pl-4">
                                 <span>name: </span><span className="text-emerald-300">"Abhinand T V"</span>,
                                 <br />
@@ -199,7 +199,7 @@ export default function Hero() {
                                 <span className="text-amber-300">"React"</span>, <span className="text-amber-300">"Node"</span>, <span className="text-amber-300">"GIS"</span>
                                 <span className="text-cyan-300">]</span>,
                                 <br />
-                                <span>location: </span><span className="text-emerald-305">"Kerala, India"</span>
+                                <span>location: </span><span className="text-emerald-300">"Kerala, India"</span>
                             </div>
                             {"};"}
                             <div className="mt-4 text-[10px] text-slate-500 border-t border-white/5 pt-4 text-center">
