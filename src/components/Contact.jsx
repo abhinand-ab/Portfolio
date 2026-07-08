@@ -99,7 +99,7 @@ export default function Contact() {
                                 </div>
 
                                 <a
-                                    href="https://quizz-app-theta-seven.vercel.app/" // Mock Resume File
+                                    href="https://drive.google.com/file/d/1gKWcd1Qyd_vJnlgTQgl4qgmCr2PMvOF3/view?usp=drivesdk" // Mock Resume File
                                     target="_blank"
                                     rel="noreferrer"
                                     className="flex items-center gap-4 group p-3 bg-[#081229]/40 rounded-2xl border border-cyan-500/10 hover:border-teal-500/30 hover:shadow-[0_0_15px_rgba(20,184,166,0.15)] transition-all font-sans"
