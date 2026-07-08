@@ -115,10 +115,10 @@ const projectsData = [
 
 export default function Projects() {
     return (
-        <section id="projects" className="py-28 px-6 bg-slate-950 relative overflow-hidden">
+        <section id="projects" className="py-28 px-6 bg-transparent relative overflow-hidden">
             {/* Decorative Blob */}
-            <div className="absolute top-[40%] right-[-5%] w-[450px] h-[450px] bg-indigo-500/5 rounded-full blur-[120px]" />
-            <div className="absolute bottom-[20%] left-[-5%] w-[450px] h-[450px] bg-purple-500/5 rounded-full blur-[120px]" />
+            <div className="absolute top-[40%] right-[-5%] w-[450px] h-[450px] bg-[#0c4a6e]/5 rounded-full blur-[120px]" />
+            <div className="absolute bottom-[20%] left-[-5%] w-[450px] h-[450px] bg-[#083344]/5 rounded-full blur-[120px]" />
 
             <div className="max-w-6xl mx-auto relative z-10">
 
@@ -129,7 +129,7 @@ export default function Projects() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.5 }}
-                        className="text-xs font-semibold uppercase tracking-[0.25em] text-indigo-400 mb-3"
+                        className="text-xs font-semibold uppercase tracking-[0.25em] text-cyan-400 mb-3"
                     >
                         My Creations
                     </motion.div>
@@ -138,7 +138,7 @@ export default function Projects() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.5, delay: 0.1 }}
-                        className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-white via-indigo-200 to-slate-400 bg-clip-text text-transparent"
+                        className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-white via-cyan-100 to-slate-400 bg-clip-text text-transparent"
                     >
                         Featured Projects
                     </motion.h2>
@@ -147,7 +147,7 @@ export default function Projects() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.5, delay: 0.2 }}
-                        className="w-16 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto mt-4 rounded-full"
+                        className="w-16 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto mt-4 rounded-full"
                     />
                 </div>
 
@@ -160,23 +160,23 @@ export default function Projects() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-80px" }}
                             transition={{ duration: 0.5, delay: (idx % 2) * 0.1 }}
-                            className="group bg-slate-900/50 hover:bg-slate-900/80 border border-white/5 hover:border-indigo-500/30 rounded-3xl overflow-hidden shadow-2xl glassmorphism flex flex-col justify-between h-full transition-all duration-300 transform hover:-translate-y-1"
+                            className="group border border-cyan-500/10 hover:border-cyan-500/30 rounded-3xl overflow-hidden shadow-2xl glassmorphism flex flex-col justify-between h-full transition-all duration-300 transform hover:-translate-y-1"
                         >
 
                             {/* Project Image/Visual Visualizer Placeholder */}
-                            <div className={`relative h-48 w-full bg-gradient-to-br ${project.bgClass} flex items-center justify-center p-6 border-b border-white/5 overflow-hidden`}>
+                            <div className={`relative h-48 w-full bg-gradient-to-br ${project.bgClass} flex items-center justify-center p-6 border-b border-cyan-550/15 overflow-hidden`}>
                                 {/* Visual grid bg pattern */}
-                                <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_100%,transparent_100%)] opacity-40" />
+                                <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_100%,transparent_100%)] opacity-45" />
 
                                 {/* Orb blur glow */}
-                                <div className="absolute w-24 h-24 rounded-full bg-white/5 blur-xl group-hover:scale-125 transition-transform duration-500" />
+                                <div className="absolute w-24 h-24 rounded-full bg-cyan-400/5 blur-xl group-hover:scale-125 transition-transform duration-500" />
 
                                 {project.visual}
 
                                 {/* Star featured tag */}
                                 {project.featured && (
-                                    <div className="absolute top-4 right-4 flex items-center gap-1 bg-slate-950/80 border border-white/10 px-3 py-1 rounded-full text-[10px] font-semibold text-amber-400 backdrop-blur-md">
-                                        <Star className="w-3.5 h-3.5 fill-amber-450 text-amber-400" />
+                                    <div className="absolute top-4 right-4 flex items-center gap-1 bg-[#081229]/80 border border-cyan-500/20 px-3 py-1 rounded-full text-[10px] font-semibold text-amber-400 backdrop-blur-md">
+                                        <Star className="w-3.5 h-3.5 fill-amber-450 text-amber-450" />
                                         Featured
                                     </div>
                                 )}
@@ -184,7 +184,7 @@ export default function Projects() {
 
                             {/* Card Details */}
                             <div className="p-8 flex flex-col flex-grow">
-                                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-indigo-400 transition-colors">
+                                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                                     {project.title}
                                 </h3>
 
@@ -209,7 +209,7 @@ export default function Projects() {
                                     {project.tech.map((t) => (
                                         <span
                                             key={t}
-                                            className="px-3 py-1 bg-white/5 hover:bg-white/10 border border-white/5 text-slate-350 text-xs rounded-md transition-colors"
+                                            className="px-3 py-1 bg-[#081229]/40 hover:bg-[#0c1e45]/60 border border-cyan-500/10 text-slate-300 text-xs rounded-md transition-colors"
                                         >
                                             {t}
                                         </span>
@@ -217,13 +217,13 @@ export default function Projects() {
                                 </div>
 
                                 {/* Links Buttons */}
-                                <div className="flex items-center gap-4 mt-auto pt-4 border-t border-white/5">
+                                <div className="flex items-center gap-4 mt-auto pt-4 border-t border-cyan-500/10">
                                     {project.live && (
                                         <a
                                             href={project.live}
                                             target="_blank"
                                             rel="noreferrer"
-                                            className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-semibold shadow-md shadow-indigo-600/15 group/btn transition-all"
+                                            className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white rounded-xl text-xs font-semibold shadow-md shadow-blue-500/10 hover:shadow-[0_0_15px_rgba(6,182,212,0.25)] group/btn transition-all"
                                         >
                                             Live Demo
                                             <ExternalLink className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
@@ -234,7 +234,7 @@ export default function Projects() {
                                         href={project.git}
                                         target="_blank"
                                         rel="noreferrer"
-                                        className={`inline-flex items-center justify-center gap-2 px-5 py-3 bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-xl text-xs font-semibold transition-all ${project.live ? "w-[40%]" : "flex-1"
+                                        className={`inline-flex items-center justify-center gap-2 px-5 py-3 bg-[#081229]/30 hover:bg-[#0c1e45]/50 text-white border border-white/10 hover:border-cyan-500/35 hover:shadow-[0_0_12px_rgba(6,182,212,0.15)] rounded-xl text-xs font-semibold transition-all ${project.live ? "w-[40%]" : "flex-1"
                                             }`}
                                     >
                                         <GitHub className="w-4 h-4" />

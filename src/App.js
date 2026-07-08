@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./components/Navbar";
+import CosmicBackground from "./components/CosmicBackground";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
@@ -9,10 +10,11 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col antialiased selection:bg-indigo-500/30 selection:text-white">
+    <div className="min-h-screen text-slate-100 flex flex-col antialiased selection:bg-cyan-500/30 selection:text-white relative">
+      <CosmicBackground />
       <Navbar />
 
-      <main className="flex-grow">
+      <main className="flex-grow relative z-10">
         <Hero />
         <About />
         <Skills />

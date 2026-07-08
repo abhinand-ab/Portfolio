@@ -41,7 +41,7 @@ export default function Navbar() {
     return (
         <header
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-                ? "bg-slate-950/70 backdrop-blur-md border-b border-white/5 py-4"
+                ? "bg-[#030712]/60 backdrop-blur-xl border-b border-cyan-500/10 py-4"
                 : "bg-transparent py-6"
                 }`}
         >
@@ -51,10 +51,10 @@ export default function Navbar() {
                     href="#home"
                     className="text-2xl font-bold tracking-tight text-white flex items-center gap-1 group"
                 >
-                    <span className="bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent group-hover:opacity-80 transition-opacity">
+                    <span className="bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent group-hover:opacity-80 transition-opacity">
                         Abhinand
                     </span>
-                    <span className="text-indigo-500 font-black">.</span>
+                    <span className="text-cyan-500 font-black">.</span>
                 </a>
 
                 {/* Desktop Navigation */}
@@ -71,7 +71,7 @@ export default function Navbar() {
                                     >
                                         {item.name}
                                         {isActive && (
-                                            <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full" />
+                                            <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full" />
                                         )}
                                     </a>
                                 </li>
@@ -81,7 +81,7 @@ export default function Navbar() {
 
                     <a
                         href="#contact"
-                        className="inline-flex items-center justify-center text-xs font-semibold px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-full border border-white/10 transition-all duration-200 gap-1 group"
+                        className="inline-flex items-center justify-center text-xs font-semibold px-4 py-2 bg-[#081229]/40 hover:bg-[#0c1e45]/60 hover:border-cyan-500/35 hover:shadow-[0_0_12px_rgba(6,182,212,0.15)] text-white rounded-full border border-cyan-500/20 transition-all duration-200 gap-1 group"
                     >
                         Hire Me
                         <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -100,7 +100,7 @@ export default function Navbar() {
 
             {/* Mobile Drawer */}
             <div
-                className={`fixed inset-y-0 right-0 z-40 w-full max-w-xs bg-slate-950/95 backdrop-blur-lg border-l border-white/5 p-6 shadow-2xl transition-transform duration-300 md:hidden ${mobileMenuOpen ? "translate-x-0" : "translate-x-full"
+                className={`fixed inset-y-0 right-0 z-40 w-full max-w-xs bg-[#030712]/90 backdrop-blur-lg border-l border-cyan-500/10 p-6 shadow-2xl transition-transform duration-300 md:hidden ${mobileMenuOpen ? "translate-x-0" : "translate-x-full"
                     }`}
             >
                 <div className="flex justify-between items-center mb-10">
@@ -118,11 +118,11 @@ export default function Navbar() {
                         {navItems.map((item) => {
                             const isActive = activeSection === item.href.slice(1);
                             return (
-                                <li key={item.name} className="border-b border-white/5 pb-3">
+                                <li key={item.name} className="border-b border-cyan-500/10 pb-3">
                                     <a
                                         href={item.href}
                                         onClick={() => setMobileMenuOpen(false)}
-                                        className={`block text-lg font-medium ${isActive ? "text-indigo-400 font-semibold" : "text-slate-350 hover:text-white"
+                                        className={`block text-lg font-medium ${isActive ? "text-cyan-400 font-semibold" : "text-slate-350 hover:text-white"
                                             }`}
                                     >
                                         {item.name}
@@ -135,7 +135,7 @@ export default function Navbar() {
                     <a
                         href="#contact"
                         onClick={() => setMobileMenuOpen(false)}
-                        className="flex items-center justify-center gap-2 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-sm font-semibold transition-all shadow-lg shadow-indigo-600/20"
+                        className="flex items-center justify-center gap-2 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white rounded-xl text-sm font-semibold transition-all shadow-md shadow-blue-500/10 hover:shadow-[0_0_15px_rgba(6,182,212,0.25)]"
                     >
                         Get In Touch
                         <ArrowUpRight className="w-4 h-4" />

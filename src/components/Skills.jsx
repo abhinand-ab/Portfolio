@@ -117,10 +117,10 @@ export default function Skills() {
         : skillsData.filter((skill) => skill.category === activeCategory);
 
     return (
-        <section id="skills" className="py-28 px-6 bg-slate-900/50 relative overflow-hidden">
+        <section id="skills" className="py-28 px-6 bg-transparent relative overflow-hidden">
             {/* Glow highlight */}
-            <div className="absolute top-[10%] right-[10%] w-[350px] h-[350px] bg-indigo-500/5 rounded-full blur-[100px]" />
-            <div className="absolute bottom-[20%] left-[5%] w-[400px] h-[400px] bg-purple-500/5 rounded-full blur-[120px]" />
+            <div className="absolute top-[10%] right-[10%] w-[350px] h-[350px] bg-[#0c4a6e]/5 rounded-full blur-[100px]" />
+            <div className="absolute bottom-[20%] left-[5%] w-[400px] h-[400px] bg-[#083344]/5 rounded-full blur-[120px]" />
 
             <div className="max-w-6xl mx-auto relative z-10">
 
@@ -131,7 +131,7 @@ export default function Skills() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.5 }}
-                        className="text-xs font-semibold uppercase tracking-[0.25em] text-indigo-400 mb-3"
+                        className="text-xs font-semibold uppercase tracking-[0.25em] text-cyan-400 mb-3"
                     >
                         Technical Capability
                     </motion.div>
@@ -140,7 +140,7 @@ export default function Skills() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.5, delay: 0.1 }}
-                        className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-white via-indigo-200 to-slate-400 bg-clip-text text-transparent"
+                        className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-white via-cyan-100 to-slate-400 bg-clip-text text-transparent"
                     >
                         Skills & Technologies
                     </motion.h2>
@@ -149,7 +149,7 @@ export default function Skills() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.5, delay: 0.2 }}
-                        className="w-16 h-1 bg-gradient-to-r from-indigo-505 to-purple-505 mx-auto mt-4 rounded-full"
+                        className="w-16 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto mt-4 rounded-full"
                     />
                 </div>
 
@@ -160,8 +160,8 @@ export default function Skills() {
                             key={cat.id}
                             onClick={() => setActiveCategory(cat.id)}
                             className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer ${activeCategory === cat.id
-                                ? "bg-gradient-to-r from-indigo-550 to-purple-600 text-white shadow-md shadow-indigo-600/10 border-transparent scale-105"
-                                : "bg-slate-900 hover:bg-slate-850 text-slate-400 hover:text-white border border-white/5"
+                                ? "bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-md shadow-blue-500/10 border-transparent scale-105"
+                                : "bg-[#081229]/40 hover:bg-[#0c1e45]/60 text-slate-400 hover:text-white border border-cyan-500/10 hover:border-cyan-500/25"
                                 }`}
                         >
                             {cat.label}
@@ -184,13 +184,13 @@ export default function Skills() {
                                 exit={{ opacity: 0, y: 10, scale: 0.95 }}
                                 transition={{ duration: 0.3, delay: idx * 0.05 }}
                                 whileHover={{ y: -6 }}
-                                className="bg-slate-950/80 border border-white/5 hover:border-indigo-500/30 rounded-2xl p-6 shadow-xl relative overflow-hidden group transition-all duration-300"
+                                className="border border-cyan-500/10 hover:border-cyan-500/30 rounded-2xl p-6 shadow-xl relative overflow-hidden group transition-all duration-300 glassmorphism"
                             >
                                 {/* Micro-glow on Hover */}
-                                <div className="absolute inset-0 bg-gradient-to-br from-indigo-650/0 to-indigo-500/0 group-hover:from-indigo-650/5 group-hover:to-indigo-500/5 transition-all duration-300 pointer-events-none" />
+                                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 to-blue-500/0 group-hover:from-cyan-500/5 group-hover:to-blue-500/5 transition-all duration-300 pointer-events-none" />
 
                                 <div className="flex items-center gap-4 mb-4">
-                                    <div className="p-3 bg-slate-900 border border-white/5 rounded-xl text-slate-300 group-hover:text-white group-hover:bg-slate-850 group-hover:border-indigo-500/20 transition-all duration-300">
+                                    <div className="p-3 bg-[#081229]/60 border border-cyan-500/10 rounded-xl text-slate-300 group-hover:text-white group-hover:bg-[#0c1e45]/80 group-hover:border-cyan-500/20 transition-all duration-300">
                                         {skill.icon}
                                     </div>
                                     <h3 className="text-lg font-bold text-white tracking-wide">
@@ -198,12 +198,12 @@ export default function Skills() {
                                     </h3>
                                 </div>
 
-                                <p className="text-sm text-slate-400 leading-relaxed font-sans mt-2">
+                                <p className="text-sm text-slate-300 leading-relaxed font-sans mt-2">
                                     {skill.desc}
                                 </p>
 
                                 {/* Decorative border light indicator */}
-                                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-indigo-500/0 to-transparent group-hover:via-indigo-500 transition-all duration-500" />
+                                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-cyan-500/0 to-transparent group-hover:via-cyan-500 transition-all duration-500" />
                             </motion.div>
                         ))}
                     </AnimatePresence>
