@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { FileText, ArrowRight, MousePointer } from "lucide-react";
+import { motion } from "framer-motion";
+import { FileText, ArrowRight } from "lucide-react";
 import { GitHub, Linkedin } from "./CustomIcons";
 
 const technologies = [
@@ -46,7 +46,7 @@ export default function Hero() {
     }, [displayedText, isDeleting, currentTechIndex, typingSpeed]);
 
     return (
-        <section className="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden bg-hero grain">
+        <section id="home" className="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden bg-hero grain">
 
             {/* Decorative Blob Elements */}
             <div className="absolute top-[20%] left-[10%] w-[350px] h-[350px] bg-indigo-600/10 rounded-full blur-[90px] animate-pulse" />

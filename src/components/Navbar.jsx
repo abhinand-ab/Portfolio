@@ -41,14 +41,14 @@ export default function Navbar() {
     return (
         <header
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-                    ? "bg-slate-950/70 backdrop-blur-md border-b border-white/5 py-4"
-                    : "bg-transparent py-6"
+                ? "bg-slate-950/70 backdrop-blur-md border-b border-white/5 py-4"
+                : "bg-transparent py-6"
                 }`}
         >
             <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
                 {/* Brand Logo */}
                 <a
-                    href="#"
+                    href="#home"
                     className="text-2xl font-bold tracking-tight text-white flex items-center gap-1 group"
                 >
                     <span className="bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent group-hover:opacity-80 transition-opacity">

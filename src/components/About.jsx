@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { GraduationCap, Briefcase, Award, Heart, BookOpen, User } from "lucide-react";
+import { GraduationCap, Briefcase, Award, Heart, User } from "lucide-react";
 
 export default function About() {
     const cards = [

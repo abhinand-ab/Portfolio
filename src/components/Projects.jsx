@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, Star, Code2, Globe, Heart, Activity, MapPin, ShieldAlert, Award, FileSpreadsheet, Timer, CloudSun, Bus } from "lucide-react";
+import { ExternalLink, Star, Code2, Globe, Heart, Activity, MapPin, ShieldAlert, Award, Timer, CloudSun, Bus } from "lucide-react";
 import { GitHub } from "./CustomIcons";
 
 const projectsData = [
