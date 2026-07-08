@@ -46,17 +46,17 @@ export default function Hero() {
     }, [displayedText, isDeleting, currentTechIndex, typingSpeed]);
 
     return (
-        <section id="home" className="relative min-h-screen flex items-center justify-center pt-24 pb-16 bg-transparent grain">
+        <section id="home" className="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden bg-transparent grain">
 
             {/* Decorative Nebula Elements */}
             <div className="absolute top-[20%] left-[10%] w-[350px] h-[350px] bg-[#0c4a6e]/5 rounded-full blur-[100px] animate-pulse" />
             <div className="absolute bottom-[20%] right-[10%] w-[300px] h-[300px] bg-[#1e1b4b]/5 rounded-full blur-[90px] animate-pulse-slow" />
             <div className="absolute top-[40%] right-[25%] w-[180px] h-[180px] bg-[#083344]/5 rounded-full blur-[70px]" />
 
-            <div className="max-w-[1500px] mx-auto px-16 sm:px-24 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center relative z-10">
+            <div className="max-w-6xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
 
                 {/* Text Section */}
-                <div className="flex flex-col justify-center text-left">
+                <div className="lg:col-span-7 flex flex-col justify-center text-left">
 
                     <motion.div
                         initial={{ opacity: 0, y: 15 }}
@@ -169,73 +169,71 @@ export default function Hero() {
                         scale: { duration: 0.8, delay: 0.2 },
                         y: { duration: 6, repeat: Infinity, ease: "easeInOut" }
                     }}
-                    className="flex justify-center items-center relative w-full"
+                    className="lg:col-span-5 flex justify-center items-center relative"
                 >
-                    <div className="hero-visual-wrapper relative flex items-center justify-center select-none">
-                        {/* Main Visual Circle */}
-                        <div className="relative w-80 h-80 sm:w-96 sm:h-96 rounded-full border border-cyan-500/10 flex items-center justify-center p-4 bg-gradient-to-tr from-slate-950/60 to-blue-950/20 backdrop-blur-3xl shadow-xl shadow-cyan-950/15 glassmorphism">
-                            {/* Planetary Orbit Paths and Orbiting Particles */}
-                            <div className="absolute inset-0 rounded-full border border-cyan-500/10 pointer-events-none">
-                                <div className="absolute inset-0 animate-orbit-cw">
-                                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_#22d3ee]" />
-                                </div>
+                    {/* Main Visual Circle */}
+                    <div className="relative w-80 h-80 sm:w-96 sm:h-96 rounded-full border border-cyan-500/10 flex items-center justify-center p-4 bg-gradient-to-tr from-slate-950/60 to-blue-950/20 backdrop-blur-3xl shadow-xl shadow-cyan-950/15 glassmorphism">
+                        {/* Planetary Orbit Paths and Orbiting Particles */}
+                        <div className="absolute inset-0 rounded-full border border-cyan-500/10 pointer-events-none">
+                            <div className="absolute inset-0 animate-orbit-cw">
+                                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_#22d3ee]" />
                             </div>
-                            <div className="absolute inset-4 rounded-full border border-blue-500/10 pointer-events-none">
-                                <div className="absolute inset-0 animate-orbit-ccw">
-                                    <div className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-blue-400 shadow-[0_0_8px_#60a5fa]" />
-                                </div>
-                            </div>
-
-                            {/* Displaying some beautiful interactive coding text in a cool editor layout */}
-                            <div className="w-[85%] h-[85%] rounded-[2rem] overflow-hidden bg-slate-950/40 border border-white/5 p-6 flex flex-col justify-center text-xs font-mono text-cyan-300/90 leading-relaxed shadow-inner">
-                                <span className="text-cyan-455 font-bold">const</span> developer = {"{"}
-                                <div className="pl-4">
-                                    <span>name: </span><span className="text-emerald-300">"Abhinand T V"</span>,
-                                    <br />
-                                    <span>role: </span><span className="text-emerald-300">"Full-Stack Dev"</span>,
-                                    <br />
-                                    <span>education: </span><span className="text-emerald-300">"CSE @ CET"</span>,
-                                    <br />
-                                    <span>core: </span><span className="text-cyan-300">[</span>
-                                    <span className="text-amber-300">"React"</span>, <span className="text-amber-300">"Node"</span>, <span className="text-amber-300">"GIS"</span>
-                                    <span className="text-cyan-300">]</span>,
-                                    <br />
-                                    <span>location: </span><span className="text-emerald-300">"Kerala, India"</span>
-                                </div>
-                                {"};"}
-                                <div className="mt-4 text-[10px] text-slate-550 border-t border-white/5 pt-4 text-center">
-                                    &lt;Interactive Workspace /&gt;
-                                </div>
-                            </div>
-
-                            {/* Floating Orbits (badges looking like satellites) */}
-                            <motion.div
-                                animate={{ y: [0, -8, 0], x: [0, 4, 0] }}
-                                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                                className="absolute -top-4 left-1/3 bg-[#081229]/80 backdrop-blur-md border border-cyan-500/25 hover:border-cyan-400 shadow-md hover:shadow-[0_0_12px_rgba(34,211,238,0.25)] text-[10px] px-3 py-1.5 rounded-full flex items-center gap-1.5 hover:scale-105 transition-all cursor-pointer font-sans"
-                            >
-                                <span className="w-2 h-2 rounded-full bg-cyan-400 inline-block animate-pulse shadow-[0_0_6px_#22d3ee]" />
-                                React.js
-                            </motion.div>
-
-                            <motion.div
-                                animate={{ y: [0, 8, 0], x: [0, -4, 0] }}
-                                transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
-                                className="absolute -bottom-4 right-1/4 bg-[#081229]/80 backdrop-blur-md border border-emerald-500/25 hover:border-emerald-400 shadow-md hover:shadow-[0_0_12px_rgba(52,211,153,0.25)] text-[10px] px-3 py-1.5 rounded-full flex items-center gap-1.5 hover:scale-105 transition-all cursor-pointer font-sans"
-                            >
-                                <span className="w-2 h-2 rounded-full bg-emerald-405 inline-block animate-pulse shadow-[0_0_6px_#34d399]" />
-                                Node.js
-                            </motion.div>
-
-                            <motion.div
-                                animate={{ x: [0, 6, 0], y: [0, -5, 0] }}
-                                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                                className="absolute top-1/3 -right-6 bg-[#081229]/80 backdrop-blur-md border border-amber-500/25 hover:border-amber-400 shadow-md hover:shadow-[0_0_12px_rgba(251,191,36,0.25)] text-[10px] px-3 py-1.5 rounded-full flex items-center gap-1.5 hover:scale-105 transition-all cursor-pointer font-sans"
-                            >
-                                <span className="w-2 h-2 rounded-full bg-amber-400 inline-block animate-pulse shadow-[0_0_6px_#fbbf24]" />
-                                Geospatial GIS
-                            </motion.div>
                         </div>
+                        <div className="absolute inset-4 rounded-full border border-blue-500/10 pointer-events-none">
+                            <div className="absolute inset-0 animate-orbit-ccw">
+                                <div className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-blue-400 shadow-[0_0_8px_#60a5fa]" />
+                            </div>
+                        </div>
+
+                        {/* Displaying some beautiful interactive coding text in a cool editor layout */}
+                        <div className="w-[85%] h-[85%] rounded-full overflow-hidden bg-slate-950/40 border border-white/5 p-6 flex flex-col justify-center text-xs font-mono text-cyan-300/90 leading-relaxed shadow-inner">
+                            <span className="text-cyan-450 font-bold">const</span> developer = {"{"}
+                            <div className="pl-4">
+                                <span>name: </span><span className="text-emerald-300">"Abhinand T V"</span>,
+                                <br />
+                                <span>role: </span><span className="text-emerald-300">"Full-Stack Dev"</span>,
+                                <br />
+                                <span>education: </span><span className="text-emerald-300">"CSE @ CET"</span>,
+                                <br />
+                                <span>core: </span><span className="text-cyan-300">[</span>
+                                <span className="text-amber-300">"React"</span>, <span className="text-amber-300">"Node"</span>, <span className="text-amber-300">"GIS"</span>
+                                <span className="text-cyan-300">]</span>,
+                                <br />
+                                <span>location: </span><span className="text-emerald-300">"Kerala, India"</span>
+                            </div>
+                            {"};"}
+                            <div className="mt-4 text-[10px] text-slate-500 border-t border-white/5 pt-4 text-center">
+                                &lt;Interactive Workspace /&gt;
+                            </div>
+                        </div>
+
+                        {/* Floating Orbits (badges looking like satellites) */}
+                        <motion.div
+                            animate={{ y: [0, -8, 0], x: [0, 4, 0] }}
+                            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                            className="absolute -top-4 left-1/3 bg-[#081229]/80 backdrop-blur-md border border-cyan-500/25 hover:border-cyan-400 shadow-md hover:shadow-[0_0_12px_rgba(34,211,238,0.25)] text-[10px] px-3 py-1.5 rounded-full flex items-center gap-1.5 hover:scale-105 transition-all cursor-pointer font-sans"
+                        >
+                            <span className="w-2 h-2 rounded-full bg-cyan-400 inline-block animate-pulse shadow-[0_0_6px_#22d3ee]" />
+                            React.js
+                        </motion.div>
+
+                        <motion.div
+                            animate={{ y: [0, 8, 0], x: [0, -4, 0] }}
+                            transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
+                            className="absolute -bottom-4 right-1/4 bg-[#081229]/80 backdrop-blur-md border border-emerald-500/25 hover:border-emerald-400 shadow-md hover:shadow-[0_0_12px_rgba(52,211,153,0.25)] text-[10px] px-3 py-1.5 rounded-full flex items-center gap-1.5 hover:scale-105 transition-all cursor-pointer font-sans"
+                        >
+                            <span className="w-2 h-2 rounded-full bg-emerald-400 inline-block animate-pulse shadow-[0_0_6px_#34d399]" />
+                            Node.js
+                        </motion.div>
+
+                        <motion.div
+                            animate={{ x: [0, 6, 0], y: [0, -5, 0] }}
+                            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                            className="absolute top-1/3 -right-6 bg-[#081229]/80 backdrop-blur-md border border-amber-500/25 hover:border-amber-400 shadow-md hover:shadow-[0_0_12px_rgba(251,191,36,0.25)] text-[10px] px-3 py-1.5 rounded-full flex items-center gap-1.5 hover:scale-105 transition-all cursor-pointer font-sans"
+                        >
+                            <span className="w-2 h-2 rounded-full bg-amber-400 inline-block animate-pulse shadow-[0_0_6px_#fbbf24]" />
+                            Geospatial GIS
+                        </motion.div>
                     </div>
                 </motion.div>
 
