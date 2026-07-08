@@ -8,11 +8,11 @@ import {
     Cpu,
     Cloud,
     GitBranch,
-    Github,
     Server,
     Layers,
     Palette
 } from "lucide-react";
+import { GitHub } from "./CustomIcons";
 
 const skillCategories = [
     { id: "all", label: "All Skills" },
@@ -98,7 +98,7 @@ const skillsData = [
     {
         name: "GitHub",
         category: "tools-cloud",
-        icon: <Github className="w-5 h-5 text-white" />,
+        icon: <GitHub className="w-5 h-5 text-white" />,
         desc: "Online workspaces deployments, actions workflow, and team collaborations.",
     },
     {
@@ -160,8 +160,8 @@ export default function Skills() {
                             key={cat.id}
                             onClick={() => setActiveCategory(cat.id)}
                             className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer ${activeCategory === cat.id
-                                    ? "bg-gradient-to-r from-indigo-550 to-purple-600 text-white shadow-md shadow-indigo-600/10 border-transparent scale-105"
-                                    : "bg-slate-900 hover:bg-slate-850 text-slate-400 hover:text-white border border-white/5"
+                                ? "bg-gradient-to-r from-indigo-550 to-purple-600 text-white shadow-md shadow-indigo-600/10 border-transparent scale-105"
+                                : "bg-slate-900 hover:bg-slate-850 text-slate-400 hover:text-white border border-white/5"
                                 }`}
                         >
                             {cat.label}

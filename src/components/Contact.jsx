@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, MapPin, FileText, Send, CheckCircle } from "lucide-react";
-import { Github, Linkedin } from "./CustomIcons";
+import { GitHub, Linkedin } from "./CustomIcons";
 
 export default function Contact() {
     const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -125,7 +125,7 @@ export default function Contact() {
                                 rel="noreferrer"
                                 className="flex-1 py-3 bg-slate-950 border border-white/5 hover:border-white/20 text-slate-350 hover:text-white rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition-all"
                             >
-                                <Github className="w-4 h-4" />
+                                <GitHub className="w-4 h-4" />
                                 GitHub
                             </a>
                             <a

@@ -1,6 +1,6 @@
 import React from "react";
 import { Mail, ArrowUp } from "lucide-react";
-import { Github, Linkedin } from "./CustomIcons";
+import { GitHub, Linkedin } from "./CustomIcons";
 
 export default function Footer() {
     const scrollToTop = () => {
@@ -32,7 +32,7 @@ export default function Footer() {
                             className="text-slate-400 hover:text-white transition-colors"
                             title="GitHub"
                         >
-                            <Github className="w-5 h-5" />
+                            <GitHub className="w-5 h-5" />
                         </a>
                         <a
                             href="https://linkedin.com/in/abhinand-tv-"

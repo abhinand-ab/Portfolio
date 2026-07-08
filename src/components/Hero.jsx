@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FileText, ArrowRight, MousePointer } from "lucide-react";
-import { Github, Linkedin } from "./CustomIcons";
+import { GitHub, Linkedin } from "./CustomIcons";
 
 const technologies = [
     "MERN Stack",
@@ -135,7 +135,7 @@ export default function Hero() {
                                 className="w-11 h-11 bg-white/5 hover:bg-white/10 text-slate-350 hover:text-white rounded-xl border border-white/10 transition-all flex items-center justify-center"
                                 title="GitHub Portfolio"
                             >
-                                <Github className="w-5 h-5" />
+                                <GitHub className="w-5 h-5" />
                             </a>
                             <a
                                 href="https://linkedin.com/in/abhinand-tv-"

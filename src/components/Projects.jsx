@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Star, Code2, Globe, Heart, Activity, MapPin, ShieldAlert, Award, FileSpreadsheet, Timer, CloudSun, Bus } from "lucide-react";
-import { Github } from "./CustomIcons";
+import { GitHub } from "./CustomIcons";
 
 const projectsData = [
     {
@@ -237,7 +237,7 @@ export default function Projects() {
                                         className={`inline-flex items-center justify-center gap-2 px-5 py-3 bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-xl text-xs font-semibold transition-all ${project.live ? "w-[40%]" : "flex-1"
                                             }`}
                                     >
-                                        <Github className="w-4 h-4" />
+                                        <GitHub className="w-4 h-4" />
                                         GitHub
                                     </a>
                                 </div>

@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Github = ({ className = "w-5 h-5", ...props }) => (
+export const GitHub = ({ className = "w-5 h-5", ...props }) => (
     <svg
         viewBox="0 0 24 24"
         fill="none"
