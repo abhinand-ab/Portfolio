@@ -78,7 +78,7 @@ export default function Hero() {
                         className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white mb-4"
                     >
                         Hi, I'm{" "}
-                        <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                        <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent md:whitespace-nowrap">
                             Abhinand T V
                         </span>
                     </motion.h1>
