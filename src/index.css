@@ -192,3 +192,32 @@ body {
 .animate-orbit-ccw {
   animation: orbit-ccw 20s linear infinite;
 }
+
+/* Responsive scaling for hero orbit illustration to prevent clipping below 1200px */
+@media (max-width: 1200px) and (min-width: 1024px) {
+  .hero-visual-wrapper {
+    transform: scale(0.85);
+    transform-origin: center;
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .hero-visual-wrapper {
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 480px) {
+  .hero-visual-wrapper {
+    transform: scale(0.85);
+    transform-origin: center;
+  }
+}
+
+@media (max-width: 479px) {
+  .hero-visual-wrapper {
+    transform: scale(0.72);
+    transform-origin: center;
+  }
+}
