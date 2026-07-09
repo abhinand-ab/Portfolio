@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="min-h-screen text-slate-100 flex flex-col antialiased selection:bg-cyan-500/30 selection:text-white relative">
+    <div className="min-h-screen text-[#F8F8F8] flex flex-col antialiased selection:bg-[#D4AF37] selection:text-[#0B0B0B] relative">
       <CosmicBackground />
       <Navbar />
 

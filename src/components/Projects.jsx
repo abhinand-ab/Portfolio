@@ -11,8 +11,8 @@ const projectsData = [
         live: "https://ai-fitness-black.vercel.app",
         git: "https://github.com/abhinand-ab/AI-FITNESS",
         features: ["Secure JWT authorization & session management", "Calorie & BMI progress charts using Recharts", "Comprehensive workout logger CRUD flow"],
-        bgClass: "from-indigo-600 via-indigo-900 to-slate-950",
-        visual: <Activity className="w-12 h-12 text-indigo-400 group-hover:scale-110 transition-transform duration-500" />,
+        bgClass: "from-[#D4AF37]/25 via-[#181818] to-[#0B0B0B]",
+        visual: <Activity className="w-12 h-12 text-[#D4AF37] group-hover:scale-110 transition-transform duration-500" />,
         featured: true,
     },
     {
@@ -22,8 +22,8 @@ const projectsData = [
         live: "https://blood-donation-system-beta-three.vercel.app",
         git: "https://github.com/abhinand-ab/blood-donation-system",
         features: ["Blood group indexed searching logic", "MERN stack configuration with Atlas Cloud", "Responsive dashboard showing donor records status"],
-        bgClass: "from-red-600 via-red-900 to-slate-950",
-        visual: <Heart className="w-12 h-12 text-red-450 group-hover:scale-110 transition-transform duration-500" />,
+        bgClass: "from-[#E8C547]/25 via-[#181818] to-[#0B0B0B]",
+        visual: <Heart className="w-12 h-12 text-[#E8C547] group-hover:scale-110 transition-transform duration-500" />,
         featured: true,
     },
     {
@@ -33,8 +33,8 @@ const projectsData = [
         live: "https://flood-risk-psi.vercel.app/",
         git: "https://github.com/abhinand-ab/Flood-Risk.git",
         features: ["GPS-based location mapping utilizing Leaflet.js", "Real-time OpenWeather integrations & scoring alerts", "Safety maps & district emergency contacts directory"],
-        bgClass: "from-blue-600 via-blue-900 to-slate-950",
-        visual: <ShieldAlert className="w-12 h-12 text-blue-400 group-hover:scale-110 transition-transform duration-500" />,
+        bgClass: "from-[#D4AF37]/25 via-[#181818] to-[#0B0B0B]",
+        visual: <ShieldAlert className="w-12 h-12 text-[#D4AF37] group-hover:scale-110 transition-transform duration-500" />,
         featured: true,
     },
     {
@@ -44,8 +44,8 @@ const projectsData = [
         live: "https://farmer-land-registry-tan.vercel.app/",
         git: "https://github.com/abhinand-ab/Farmer_Land_Registry.git",
         features: ["Leaflet GIS map coordinate plot and visualization", "MongoDB 2dsphere geospatial proximity locator querying", "Interactive administration statistics panel chart HUD"],
-        bgClass: "from-green-600 via-green-900 to-slate-950",
-        visual: <MapPin className="w-12 h-12 text-emerald-400 group-hover:scale-110 transition-transform duration-500" />,
+        bgClass: "from-[#E8C547]/25 via-[#181818] to-[#0B0B0B]",
+        visual: <MapPin className="w-12 h-12 text-[#E8C547] group-hover:scale-110 transition-transform duration-500" />,
         featured: true,
     },
     {
@@ -55,8 +55,8 @@ const projectsData = [
         live: "https://neighbourhood-green-space-map-c749.vercel.app/",
         git: "https://github.com/abhinand-ab/Neighbourhood-Green-Space-Map.git",
         features: ["Interactive leaflet.heat density visualizers", "Nominatim city coordinates search autocomplete integrations", "Overpass API spatial parser for environmental analysis"],
-        bgClass: "from-emerald-600 via-emerald-950 to-slate-950",
-        visual: <Globe className="w-12 h-12 text-teal-400 group-hover:scale-110 transition-transform duration-500" />,
+        bgClass: "from-[#D4AF37]/25 via-[#181818] to-[#0B0B0B]",
+        visual: <Globe className="w-12 h-12 text-[#D4AF37] group-hover:scale-110 transition-transform duration-500" />,
         featured: true,
     },
     {
@@ -66,8 +66,8 @@ const projectsData = [
         live: "https://quizz-app-theta-seven.vercel.app/",
         git: "https://github.com/abhinand-ab/Quizz_app.git",
         features: ["Interval 15-second timer & quiz flow engine", "Randomized Fisher-Yates array logic selection", "High-scores persistence mapping via LocalStorage API"],
-        bgClass: "from-purple-650 via-purple-950 to-slate-950",
-        visual: <Timer className="w-12 h-12 text-purple-400 group-hover:scale-110 transition-transform duration-500" />,
+        bgClass: "from-[#E8C547]/25 via-[#181818] to-[#0B0B0B]",
+        visual: <Timer className="w-12 h-12 text-[#E8C547] group-hover:scale-110 transition-transform duration-500" />,
         featured: true,
     },
     {
@@ -77,8 +77,8 @@ const projectsData = [
         live: "https://weather-dashboard-ten-tan.vercel.app/",
         git: "https://github.com/abhinand-ab/Weather_Dashboard.git",
         features: ["Live weather API payload fetching operations", "Visual 5-day weather condition card dashboards", "Responsive styling supporting mobile HUD views"],
-        bgClass: "from-sky-600 via-sky-950 to-slate-950",
-        visual: <CloudSun className="w-12 h-12 text-sky-400 group-hover:scale-110 transition-transform duration-500" />,
+        bgClass: "from-[#D4AF37]/25 via-[#181818] to-[#0B0B0B]",
+        visual: <CloudSun className="w-12 h-12 text-[#D4AF37] group-hover:scale-110 transition-transform duration-500" />,
         featured: true,
     },
     {
@@ -87,8 +87,8 @@ const projectsData = [
         tech: ["HTML", "CSS", "JavaScript"],
         git: "https://github.com/abhinand-ab/cetaa-website",
         features: ["Renovation layout theme configuration", "Smooth UI navigation structures & elements styling", "HTML5 semantic page layouts for indexing"],
-        bgClass: "from-amber-600 via-amber-950 to-slate-950",
-        visual: <Award className="w-12 h-12 text-amber-500 group-hover:scale-110 transition-transform duration-500" />,
+        bgClass: "from-[#E8C547]/25 via-[#181818] to-[#0B0B0B]",
+        visual: <Award className="w-12 h-12 text-[#E8C547] group-hover:scale-110 transition-transform duration-500" />,
         featured: true,
     },
     {
@@ -97,8 +97,8 @@ const projectsData = [
         tech: ["HTML", "CSS", "JavaScript", "Local Storage"],
         git: "https://github.com/abhinand-ab/Bus-reservation",
         features: ["Interactive seating grids choice representation", "Booking confirmations display status notifications", "Web browsers LocalStorage memory persistence"],
-        bgClass: "from-cyan-600 via-cyan-950 to-slate-950",
-        visual: <Bus className="w-12 h-12 text-cyan-400 group-hover:scale-110 transition-transform duration-500" />,
+        bgClass: "from-[#D4AF37]/25 via-[#181818] to-[#0B0B0B]",
+        visual: <Bus className="w-12 h-12 text-[#D4AF37] group-hover:scale-110 transition-transform duration-500" />,
         featured: true,
     },
     {
@@ -107,8 +107,8 @@ const projectsData = [
         tech: ["Python", "Flask", "SQLite", "REST API"],
         git: "https://github.com/abhinand-ab/Dhamani-backend",
         features: ["Flask endpoint structures and routing APIs", "SQLite local data structures management", "Donor matches mapping proximity distance utilities"],
-        bgClass: "from-rose-600 via-rose-950 to-slate-950",
-        visual: <Code2 className="w-12 h-12 text-rose-500 group-hover:scale-110 transition-transform duration-500" />,
+        bgClass: "from-[#E8C547]/25 via-[#181818] to-[#0B0B0B]",
+        visual: <Code2 className="w-12 h-12 text-[#E8C547] group-hover:scale-110 transition-transform duration-500" />,
         featured: true,
     },
 ];
@@ -117,8 +117,8 @@ export default function Projects() {
     return (
         <section id="projects" className="py-28 px-6 bg-transparent relative overflow-hidden">
             {/* Decorative Blob */}
-            <div className="absolute top-[40%] right-[-5%] w-[450px] h-[450px] bg-[#0c4a6e]/5 rounded-full blur-[120px]" />
-            <div className="absolute bottom-[20%] left-[-5%] w-[450px] h-[450px] bg-[#083344]/5 rounded-full blur-[120px]" />
+            <div className="absolute top-[40%] right-[-5%] w-[450px] h-[450px] bg-[#D4AF37]/1.5 rounded-full blur-[120px]" />
+            <div className="absolute bottom-[20%] left-[-5%] w-[450px] h-[450px] bg-[#E8C547]/1.2 rounded-full blur-[120px]" />
 
             <div className="max-w-6xl mx-auto relative z-10">
 
@@ -129,7 +129,7 @@ export default function Projects() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.5 }}
-                        className="text-xs font-semibold uppercase tracking-[0.25em] text-cyan-400 mb-3"
+                        className="text-xs font-semibold uppercase tracking-[0.25em] text-[#D4AF37] mb-3"
                     >
                         My Creations
                     </motion.div>
@@ -138,7 +138,7 @@ export default function Projects() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.5, delay: 0.1 }}
-                        className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-white via-cyan-100 to-slate-400 bg-clip-text text-transparent"
+                        className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-white via-[#F4D35E]/30 to-[#B5B5B5] bg-clip-text text-transparent"
                     >
                         Featured Projects
                     </motion.h2>
@@ -147,7 +147,7 @@ export default function Projects() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.5, delay: 0.2 }}
-                        className="w-16 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto mt-4 rounded-full"
+                        className="w-16 h-1 bg-gradient-to-r from-[#D4AF37] to-[#E8C547] mx-auto mt-4 rounded-full"
                     />
                 </div>
 
@@ -160,23 +160,23 @@ export default function Projects() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-80px" }}
                             transition={{ duration: 0.5, delay: (idx % 2) * 0.1 }}
-                            className="group border border-cyan-500/10 hover:border-cyan-500/30 rounded-3xl overflow-hidden shadow-2xl glassmorphism flex flex-col justify-between h-full transition-all duration-300 transform hover:-translate-y-1"
+                            className="group border border-[rgba(212,175,55,0.15)] hover:border-[#D4AF37]/50 rounded-3xl overflow-hidden shadow-2xl glassmorphism flex flex-col justify-between h-full transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(212,175,55,0.18)]"
                         >
 
                             {/* Project Image/Visual Visualizer Placeholder */}
-                            <div className={`relative h-48 w-full bg-gradient-to-br ${project.bgClass} flex items-center justify-center p-6 border-b border-cyan-550/15 overflow-hidden`}>
+                            <div className={`relative h-48 w-full bg-gradient-to-br ${project.bgClass} flex items-center justify-center p-6 border-b border-[rgba(212,175,55,0.15)] overflow-hidden`}>
                                 {/* Visual grid bg pattern */}
                                 <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_100%,transparent_100%)] opacity-45" />
 
                                 {/* Orb blur glow */}
-                                <div className="absolute w-24 h-24 rounded-full bg-cyan-400/5 blur-xl group-hover:scale-125 transition-transform duration-500" />
+                                <div className="absolute w-24 h-24 rounded-full bg-[#D4AF37]/5 blur-xl group-hover:scale-125 transition-transform duration-500" />
 
                                 {project.visual}
 
                                 {/* Star featured tag */}
                                 {project.featured && (
-                                    <div className="absolute top-4 right-4 flex items-center gap-1 bg-[#081229]/80 border border-cyan-500/20 px-3 py-1 rounded-full text-[10px] font-semibold text-amber-400 backdrop-blur-md">
-                                        <Star className="w-3.5 h-3.5 fill-amber-450 text-amber-450" />
+                                    <div className="absolute top-4 right-4 flex items-center gap-1 bg-[#D4AF37] border border-transparent px-3 py-1 rounded-full text-[10px] font-bold text-[#0B0B0B] shadow-[#D4AF37]/20 hover:shadow-[0_0_10px_#D4AF37] transition-all backdrop-blur-md">
+                                        <Star className="w-3.5 h-3.5 fill-[#0B0B0B] text-[#0B0B0B]" />
                                         Featured
                                     </div>
                                 )}
@@ -184,7 +184,7 @@ export default function Projects() {
 
                             {/* Card Details */}
                             <div className="p-8 flex flex-col flex-grow">
-                                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#D4AF37] transition-colors">
                                     {project.title}
                                 </h3>
 
@@ -209,7 +209,7 @@ export default function Projects() {
                                     {project.tech.map((t) => (
                                         <span
                                             key={t}
-                                            className="px-3 py-1 bg-[#081229]/40 hover:bg-[#0c1e45]/60 border border-cyan-500/10 text-slate-300 text-xs rounded-md transition-colors"
+                                            className="px-3 py-1.5 bg-[#121212] hover:bg-[#181818] border border-[rgba(212,175,55,0.35)] hover:border-[#D4AF37] text-[#D4AF37] hover:text-[#F8F8F8] font-mono text-[10px] rounded-md transition-all duration-300 cursor-default"
                                         >
                                             {t}
                                         </span>
@@ -217,13 +217,13 @@ export default function Projects() {
                                 </div>
 
                                 {/* Links Buttons */}
-                                <div className="flex items-center gap-4 mt-auto pt-4 border-t border-cyan-500/10">
+                                <div className="flex items-center gap-4 mt-auto pt-4 border-t border-[rgba(212,175,55,0.15)]">
                                     {project.live && (
                                         <a
                                             href={project.live}
                                             target="_blank"
                                             rel="noreferrer"
-                                            className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white rounded-xl text-xs font-semibold shadow-md shadow-blue-500/10 hover:shadow-[0_0_15px_rgba(6,182,212,0.25)] group/btn transition-all"
+                                            className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 bg-gradient-to-r from-[#D4AF37] to-[#E8C547] hover:brightness-110 text-[#0B0B0B] rounded-xl text-xs font-semibold shadow-md shadow-[#D4AF37]/15 hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] group/btn transition-all cursor-pointer"
                                         >
                                             Live Demo
                                             <ExternalLink className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
@@ -234,7 +234,7 @@ export default function Projects() {
                                         href={project.git}
                                         target="_blank"
                                         rel="noreferrer"
-                                        className={`inline-flex items-center justify-center gap-2 px-5 py-3 bg-[#081229]/30 hover:bg-[#0c1e45]/50 text-white border border-white/10 hover:border-cyan-500/35 hover:shadow-[0_0_12px_rgba(6,182,212,0.15)] rounded-xl text-xs font-semibold transition-all ${project.live ? "w-[40%]" : "flex-1"
+                                        className={`inline-flex items-center justify-center gap-2 px-5 py-3 bg-transparent hover:bg-[#D4AF37]/10 text-white border border-[#D4AF37]/40 hover:border-[#D4AF37] hover:shadow-[0_0_12px_rgba(212,175,55,0.2)] rounded-xl text-xs font-semibold transition-all cursor-pointer ${project.live ? "w-[40%]" : "flex-1"
                                             }`}
                                     >
                                         <GitHub className="w-4 h-4" />

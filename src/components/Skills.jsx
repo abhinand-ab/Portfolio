@@ -28,71 +28,77 @@ const skillsData = [
     {
         name: "JavaScript (ES6+)",
         category: "programming",
-        icon: <Code className="w-5 h-5 text-yellow-450" />,
+        icon: <Code className="w-5 h-5 text-[#D4AF37]" />,
         desc: "Robust interactive behavior, asynchronous state management, and modern ES modules.",
     },
     {
         name: "Python",
         category: "programming",
-        icon: <Terminal className="w-5 h-5 text-blue-450" />,
+        icon: <Terminal className="w-5 h-5 text-[#D4AF37]" />,
         desc: "Clean backend scriptings, automation, and API prototyping.",
+    },
+    {
+        name: "C",
+        category: "programming",
+        icon: <Code className="w-5 h-5 text-[#D4AF37]" />,
+        desc: "Strong foundation in structured programming, pointers, memory management, data structures, and algorithm implementation.",
     },
     // Frontend
     {
         name: "React.js",
         category: "frontend",
-        icon: <Layers className="w-5 h-5 text-cyan-400" />,
+        icon: <Layers className="w-5 h-5 text-[#E8C547]" />,
         desc: "Component-based architecture, advanced rendering, hooks, and responsive state.",
     },
     {
         name: "Tailwind CSS",
         category: "frontend",
-        icon: <Palette className="w-5 h-5 text-teal-400" />,
+        icon: <Palette className="w-5 h-5 text-[#E8C547]" />,
         desc: "Utility-first stylesheet configurations, responsive viewports, and modern dark modes.",
     },
     // Backend
     {
         name: "Node.js",
         category: "backend",
-        icon: <Server className="w-5 h-5 text-green-500" />,
+        icon: <Server className="w-5 h-5 text-[#D4AF37]" />,
         desc: "Event-driven runtime for high-performance server logic and operations.",
     },
     {
         name: "Express.js",
         category: "backend",
-        icon: <Cpu className="w-5 h-5 text-indigo-400" />,
+        icon: <Cpu className="w-5 h-5 text-[#D4AF37]" />,
         desc: "Minimalist server routing, middleware integrations, and RESTful API structures.",
     },
     {
         name: "Flask",
         category: "backend",
-        icon: <Layers className="w-5 h-5 text-sky-400" />,
+        icon: <Layers className="w-5 h-5 text-[#D4AF37]" />,
         desc: "Lightweight Python framework for clean backend APIs and microservices.",
     },
     {
         name: "REST APIs",
         category: "backend",
-        icon: <Globe className="w-5 h-5 text-amber-500" />,
+        icon: <Globe className="w-5 h-5 text-[#D4AF37]" />,
         desc: "Standardized request handling, JSON responses, and third-party integrations.",
     },
     // Database
     {
         name: "MongoDB Atlas",
         category: "database",
-        icon: <Database className="w-5 h-5 text-emerald-500" />,
+        icon: <Database className="w-5 h-5 text-[#E8C547]" />,
         desc: "NoSQL database management, 2dsphere GIS spatial indexings, and cloud clusters.",
     },
     {
         name: "MySQL / SQLite",
         category: "database",
-        icon: <Database className="w-5 h-5 text-indigo-400" />,
+        icon: <Database className="w-5 h-5 text-[#E8C547]" />,
         desc: "Relational database tables, structured queries, and secure integration.",
     },
     // Tools & Cloud (Deployment / Version Control)
     {
         name: "Git",
         category: "tools-cloud",
-        icon: <GitBranch className="w-5 h-5 text-orange-500" />,
+        icon: <GitBranch className="w-5 h-5 text-[#D4AF37]" />,
         desc: "Distributed version control, branches management, and clean change logs.",
     },
     {
@@ -104,7 +110,7 @@ const skillsData = [
     {
         name: "Vercel / Render",
         category: "tools-cloud",
-        icon: <Cloud className="w-5 h-5 text-cyan-400" />,
+        icon: <Cloud className="w-5 h-5 text-[#D4AF37]" />,
         desc: "Cloud platforms hosting frontend builds and backends with environment config.",
     },
 ];
@@ -119,8 +125,8 @@ export default function Skills() {
     return (
         <section id="skills" className="py-28 px-6 bg-transparent relative overflow-hidden">
             {/* Glow highlight */}
-            <div className="absolute top-[10%] right-[10%] w-[350px] h-[350px] bg-[#0c4a6e]/5 rounded-full blur-[100px]" />
-            <div className="absolute bottom-[20%] left-[5%] w-[400px] h-[400px] bg-[#083344]/5 rounded-full blur-[120px]" />
+            <div className="absolute top-[10%] right-[10%] w-[350px] h-[350px] bg-[#D4AF37]/1.5 rounded-full blur-[100px]" />
+            <div className="absolute bottom-[20%] left-[5%] w-[400px] h-[400px] bg-[#E8C547]/1 rounded-full blur-[120px]" />
 
             <div className="max-w-6xl mx-auto relative z-10">
 
@@ -131,7 +137,7 @@ export default function Skills() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.5 }}
-                        className="text-xs font-semibold uppercase tracking-[0.25em] text-cyan-400 mb-3"
+                        className="text-xs font-semibold uppercase tracking-[0.25em] text-[#D4AF37] mb-3"
                     >
                         Technical Capability
                     </motion.div>
@@ -140,7 +146,7 @@ export default function Skills() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.5, delay: 0.1 }}
-                        className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-white via-cyan-100 to-slate-400 bg-clip-text text-transparent"
+                        className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-white via-[#F4D35E]/30 to-[#B5B5B5] bg-clip-text text-transparent"
                     >
                         Skills & Technologies
                     </motion.h2>
@@ -149,7 +155,7 @@ export default function Skills() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.5, delay: 0.2 }}
-                        className="w-16 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto mt-4 rounded-full"
+                        className="w-16 h-1 bg-gradient-to-r from-[#D4AF37] to-[#E8C547] mx-auto mt-4 rounded-full"
                     />
                 </div>
 
@@ -160,8 +166,8 @@ export default function Skills() {
                             key={cat.id}
                             onClick={() => setActiveCategory(cat.id)}
                             className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer ${activeCategory === cat.id
-                                ? "bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-md shadow-blue-500/10 border-transparent scale-105"
-                                : "bg-[#081229]/40 hover:bg-[#0c1e45]/60 text-slate-400 hover:text-white border border-cyan-500/10 hover:border-cyan-500/25"
+                                ? "bg-gradient-to-r from-[#D4AF37] to-[#E8C547] text-[#0B0B0B] shadow-md shadow-[#D4AF37]/15 border-transparent scale-105"
+                                : "bg-[rgba(24,24,24,0.45)] hover:bg-[rgba(24,24,24,0.85)] text-[#B5B5B5] hover:text-white border border-[rgba(212,175,55,0.15)] hover:border-[#D4AF37]/50"
                                 }`}
                         >
                             {cat.label}
@@ -184,13 +190,13 @@ export default function Skills() {
                                 exit={{ opacity: 0, y: 10, scale: 0.95 }}
                                 transition={{ duration: 0.3, delay: idx * 0.05 }}
                                 whileHover={{ y: -6 }}
-                                className="border border-cyan-500/10 hover:border-cyan-500/30 rounded-2xl p-6 shadow-xl relative overflow-hidden group transition-all duration-300 glassmorphism"
+                                className="border border-[rgba(212,175,55,0.15)] hover:border-[#D4AF37]/50 rounded-2xl p-6 shadow-xl relative overflow-hidden group transition-all duration-300 glassmorphism hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(212,175,55,0.18)]"
                             >
                                 {/* Micro-glow on Hover */}
-                                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 to-blue-500/0 group-hover:from-cyan-500/5 group-hover:to-blue-500/5 transition-all duration-300 pointer-events-none" />
+                                <div className="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/0 to-[#E8C547]/0 group-hover:from-[#D4AF37]/3 group-hover:to-[#E8C547]/3 transition-all duration-300 pointer-events-none" />
 
                                 <div className="flex items-center gap-4 mb-4">
-                                    <div className="p-3 bg-[#081229]/60 border border-cyan-500/10 rounded-xl text-slate-300 group-hover:text-white group-hover:bg-[#0c1e45]/80 group-hover:border-cyan-500/20 transition-all duration-300">
+                                    <div className="p-3 bg-[rgba(24,24,24,0.65)] border border-[rgba(212,175,55,0.15)] rounded-xl text-[#B5B5B5] group-hover:text-white group-hover:bg-[rgba(24,24,24,0.85)] group-hover:border-[#D4AF37]/45 transition-all duration-300">
                                         {skill.icon}
                                     </div>
                                     <h3 className="text-lg font-bold text-white tracking-wide">
@@ -198,12 +204,12 @@ export default function Skills() {
                                     </h3>
                                 </div>
 
-                                <p className="text-sm text-slate-300 leading-relaxed font-sans mt-2">
+                                <p className="text-sm text-[#B5B5B5] leading-relaxed font-sans mt-2">
                                     {skill.desc}
                                 </p>
 
                                 {/* Decorative border light indicator */}
-                                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-cyan-500/0 to-transparent group-hover:via-cyan-500 transition-all duration-500" />
+                                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#D4AF37]/0 to-transparent group-hover:via-[#D4AF37] transition-all duration-500" />
                             </motion.div>
                         ))}
                     </AnimatePresence>
