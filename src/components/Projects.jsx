@@ -1,9 +1,20 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, Star, Code2, Globe, Heart, Activity, MapPin, ShieldAlert, Award, Timer, CloudSun, Bus } from "lucide-react";
+import { ExternalLink, Star, Code2, Globe, Heart, Activity, MapPin, ShieldAlert, Award, Timer, CloudSun, Bus, Map } from "lucide-react";
 import { GitHub } from "./CustomIcons";
 
 const projectsData = [
+    {
+        title: "Kerala Disaster Intelligence Platform",
+        desc: "A real-time disaster intelligence platform designed to monitor floods, landslides, weather conditions, emergency shelters, air quality, and live incidents across Kerala. The platform combines geospatial visualization, live APIs, and real-time communication to support disaster response and public safety.",
+        tech: ["React.js", "Node.js", "Express.js", "MongoDB Atlas", "Leaflet.js", "Socket.IO", "Tailwind CSS", "OpenWeather API", "GeoJSON", "REST API", "Vercel", "Render"],
+        live: "https://kerala-disaster-intelligence-platfo.vercel.app",
+        git: "https://github.com/abhinand-ab/Kerala-Disaster-Intelligence-Platform",
+        features: ["Real-time flood & landslide monitoring with GeoJSON overlays", "Interactive Leaflet.js GIS maps with AQI & shelter locator", "Live incident reporting & Socket.IO real-time updates"],
+        bgClass: "from-[#D4AF37]/25 via-[#181818] to-[#0B0B0B]",
+        visual: <Map className="w-12 h-12 text-[#D4AF37] group-hover:scale-110 transition-transform duration-500" />,
+        featured: true,
+    },
     {
         title: "AI Fitness Tracker",
         desc: "A full-stack fitness tracking application built using the MERN stack. Features secure JWT authentication, workout CRUD operations, BMI and calorie analysis, progress analytics, interactive charts, MongoDB Atlas integration, and cloud deployment using Render and Vercel.",
