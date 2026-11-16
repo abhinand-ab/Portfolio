@@ -1,262 +1,260 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, Star, Code2, Globe, Heart, Activity, MapPin, ShieldAlert, Award, Timer, CloudSun, Bus, Map } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { GitHub } from "./CustomIcons";
 
-const projectsData = [
+const featuredProjects = [
     {
         title: "Kerala Disaster Intelligence Platform",
-        desc: "A real-time disaster intelligence platform designed to monitor floods, landslides, weather conditions, emergency shelters, air quality, and live incidents across Kerala. The platform combines geospatial visualization, live APIs, and real-time communication to support disaster response and public safety.",
-        tech: ["React.js", "Node.js", "Express.js", "MongoDB Atlas", "Leaflet.js", "Socket.IO", "Tailwind CSS", "OpenWeather API", "GeoJSON", "REST API", "Vercel", "Render"],
+        desc: "A real-time disaster intelligence platform designed to monitor floods, landslides, weather conditions, emergency shelters, air quality, and live incidents across Kerala. Combines geospatial visualization, live APIs, and websocket communication for public safety response.",
+        tech: ["React.js", "Node.js", "Express.js", "MongoDB Atlas", "Leaflet.js", "Socket.IO", "OpenWeather API", "GeoJSON", "Render"],
         live: "https://kerala-disaster-intelligence-platfo.vercel.app",
         git: "https://github.com/abhinand-ab/Kerala-Disaster-Intelligence-Platform",
-        features: ["Real-time flood & landslide monitoring with GeoJSON overlays", "Interactive Leaflet.js GIS maps with AQI & shelter locator", "Live incident reporting & Socket.IO real-time updates"],
-        bgClass: "from-[#D4AF37]/25 via-[#181818] to-[#0B0B0B]",
-        visual: <Map className="w-12 h-12 text-[#D4AF37] group-hover:scale-110 transition-transform duration-500" />,
-        featured: true,
-    },
-    {
-        title: "Blood Donation System",
-        desc: "A complete full-stack MERN application developed for managing blood donors and recipients efficiently. Includes donor registration, donor search by blood group, CRUD operations, MongoDB Atlas cloud database, and deployment using Render and Vercel.",
-        tech: ["React.js", "Node.js", "Express.js", "MongoDB", "REST API", "Axios"],
-        live: "https://blood-donation-system-beta-three.vercel.app",
-        git: "https://github.com/abhinand-ab/blood-donation-system",
-        features: ["Blood group indexed searching logic", "MERN stack configuration with Atlas Cloud", "Responsive dashboard showing donor records status"],
-        bgClass: "from-[#E8C547]/25 via-[#181818] to-[#0B0B0B]",
-        visual: <Heart className="w-12 h-12 text-[#E8C547] group-hover:scale-110 transition-transform duration-500" />,
-        featured: true,
+        features: [
+            "Real-time flood & landslide monitoring with GeoJSON spatial boundaries",
+            "Interactive Leaflet.js GIS maps with air quality index (AQI) & emergency shelter locators",
+            "Live incident reporting pipeline with Socket.IO bidirectional stream updates"
+        ],
+        badge: "Flagship GIS Platform"
     },
     {
         title: "Flood Risk Intelligence Platform",
-        desc: "Developed a full-stack Flood Risk Intelligence Platform that performs GPS-based flood risk analysis using MongoDB geospatial queries. Integrated Leaflet.js interactive maps, OpenWeather API, OpenStreetMap, and geospatial flood zone visualization to provide real-time weather information, district-wise flood risk, safety scores, emergency contacts, and responsive dashboards optimized for desktop and mobile devices.",
-        tech: ["React.js", "Node.js", "Express.js", "MongoDB Atlas", "Leaflet.js", "OpenWeather API", "Tailwind CSS", "Axios"],
+        desc: "Full-stack disaster analysis system that performs GPS-based flood risk assessments using MongoDB geospatial queries. Integrates OpenWeather API telemetry, interactive Leaflet mapping, safety scoring models, and district emergency directories.",
+        tech: ["React.js", "Node.js", "Express.js", "MongoDB Atlas", "Leaflet.js", "OpenWeather API", "Tailwind CSS"],
         live: "https://flood-risk-psi.vercel.app/",
         git: "https://github.com/abhinand-ab/Flood-Risk.git",
-        features: ["GPS-based location mapping utilizing Leaflet.js", "Real-time OpenWeather integrations & scoring alerts", "Safety maps & district emergency contacts directory"],
-        bgClass: "from-[#D4AF37]/25 via-[#181818] to-[#0B0B0B]",
-        visual: <ShieldAlert className="w-12 h-12 text-[#D4AF37] group-hover:scale-110 transition-transform duration-500" />,
-        featured: true,
+        features: [
+            "GPS coordinate calculation with Leaflet.js interactive maps",
+            "Real-time OpenWeather integration & district-wise safety scoring",
+            "Geospatial flood zone overlays and rapid emergency response directory"
+        ],
+        badge: "Geospatial Intelligence"
     },
     {
         title: "Farmer Land Registry",
-        desc: "Developed a full-stack MERN application for managing farmer and agricultural land records with an interactive GIS-based interface. Users can register farmland, visualize farm locations on Leaflet maps, perform CRUD operations, search farmers, discover nearby farms using MongoDB 2dsphere geospatial indexing, and view agricultural statistics on a responsive dashboard. The backend is deployed on Render with MongoDB Atlas cloud storage.",
+        desc: "Agricultural land management system featuring an interactive GIS interface. Facilitates farmland registration, location plotting on Leaflet maps, farmer discovery via MongoDB 2dsphere indexing, and real-time agricultural statistics.",
         tech: ["React.js", "Node.js", "Express.js", "MongoDB Atlas", "Leaflet.js", "Tailwind CSS", "Axios"],
         live: "https://farmer-land-registry-tan.vercel.app/",
         git: "https://github.com/abhinand-ab/Farmer_Land_Registry.git",
-        features: ["Leaflet GIS map coordinate plot and visualization", "MongoDB 2dsphere geospatial proximity locator querying", "Interactive administration statistics panel chart HUD"],
-        bgClass: "from-[#E8C547]/25 via-[#181818] to-[#0B0B0B]",
-        visual: <MapPin className="w-12 h-12 text-[#E8C547] group-hover:scale-110 transition-transform duration-500" />,
-        featured: true,
+        features: [
+            "Leaflet GIS map coordinate plotting and boundary visualization",
+            "MongoDB 2dsphere geospatial indexing for proximity discovery",
+            "Administrative statistics dashboard with parcel record analytics"
+        ],
+        badge: "Spatial Database"
+    },
+];
+
+const otherProjects = [
+    {
+        title: "Blood Donation System",
+        desc: "Full-stack MERN application for managing blood donors and recipient requests with donor index search and cloud database clustering.",
+        tech: ["React.js", "Node.js", "Express.js", "MongoDB Atlas", "REST API"],
+        live: "https://blood-donation-system-beta-three.vercel.app",
+        git: "https://github.com/abhinand-ab/blood-donation-system",
     },
     {
         title: "Neighbourhood Green Space Map",
-        desc: "Developed an interactive geospatial web application using Leaflet.js and OpenStreetMap to visualize urban green spaces. Implemented GeoJSON park boundaries, tree-density heatmaps using Leaflet.heat, layer controls, city search with the Nominatim API, geolocation support, and live statistics in a responsive user interface.",
-        tech: ["HTML", "CSS", "JavaScript", "Leaflet.js", "GeoJSON", "OpenStreetMap", "Overpass API", "Leaflet.heat"],
+        desc: "Interactive GIS web app using Leaflet.js and OpenStreetMap to visualize urban tree density heatmaps, park boundaries, and Nominatim spatial search.",
+        tech: ["JavaScript", "Leaflet.js", "GeoJSON", "Overpass API", "Leaflet.heat"],
         live: "https://neighbourhood-green-space-map-c749.vercel.app/",
         git: "https://github.com/abhinand-ab/Neighbourhood-Green-Space-Map.git",
-        features: ["Interactive leaflet.heat density visualizers", "Nominatim city coordinates search autocomplete integrations", "Overpass API spatial parser for environmental analysis"],
-        bgClass: "from-[#D4AF37]/25 via-[#181818] to-[#0B0B0B]",
-        visual: <Globe className="w-12 h-12 text-[#D4AF37] group-hover:scale-110 transition-transform duration-500" />,
-        featured: true,
     },
     {
         title: "AI Fitness Tracker",
-        desc: "A full-stack fitness tracking application built using the MERN stack. Features secure JWT authentication, workout CRUD operations, BMI and calorie analysis, progress analytics, interactive charts, MongoDB Atlas integration, and cloud deployment using Render and Vercel.",
-        tech: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Tailwind CSS", "Recharts", "REST API"],
+        desc: "MERN fitness management platform with secure JWT authorization, workout CRUD tracking, BMI calculations, and Recharts analytics.",
+        tech: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Recharts"],
         live: "https://ai-fitness-black.vercel.app",
         git: "https://github.com/abhinand-ab/AI-FITNESS",
-        features: ["Secure JWT authorization & session management", "Calorie & BMI progress charts using Recharts", "Comprehensive workout logger CRUD flow"],
-        bgClass: "from-[#D4AF37]/25 via-[#181818] to-[#0B0B0B]",
-        visual: <Activity className="w-12 h-12 text-[#D4AF37] group-hover:scale-110 transition-transform duration-500" />,
-        featured: true,
     },
     {
         title: "CSE Placement Quiz",
-        desc: "Developed a modern interactive placement preparation quiz application using HTML5, CSS3, JavaScript, and JSON. The application dynamically loads quiz questions using the Fetch API, randomizes questions using the Fisher–Yates shuffle algorithm, includes a 15-second countdown timer, instant answer validation with explanations, progress tracking, category-wise quiz flow, responsive glassmorphism UI, and persistent high scores using LocalStorage.",
-        tech: ["HTML5", "CSS3", "JavaScript (ES6+)", "JSON", "Fetch API", "LocalStorage"],
+        desc: "Interactive preparation quiz with Fetch API question loader, Fisher–Yates shuffle algorithm, interval timers, and local storage scoring.",
+        tech: ["JavaScript (ES6+)", "HTML5", "CSS3", "LocalStorage API"],
         live: "https://quizz-app-theta-seven.vercel.app/",
         git: "https://github.com/abhinand-ab/Quizz_app.git",
-        features: ["Interval 15-second timer & quiz flow engine", "Randomized Fisher-Yates array logic selection", "High-scores persistence mapping via LocalStorage API"],
-        bgClass: "from-[#E8C547]/25 via-[#181818] to-[#0B0B0B]",
-        visual: <Timer className="w-12 h-12 text-[#E8C547] group-hover:scale-110 transition-transform duration-500" />,
-        featured: true,
     },
     {
         title: "Weather Dashboard",
-        desc: "A responsive weather forecasting application that provides real-time weather conditions, temperature, humidity, wind speed, and forecast data using weather APIs. Designed with a modern UI and optimized user experience.",
-        tech: ["JavaScript", "Weather API", "REST API", "CSS", "Responsive Design"],
+        desc: "Responsive forecasting tool providing real-time conditions, humidity, wind velocity, and multi-day meteorological forecasts via REST APIs.",
+        tech: ["JavaScript", "Weather API", "REST API", "Tailwind CSS"],
         live: "https://weather-dashboard-ten-tan.vercel.app/",
         git: "https://github.com/abhinand-ab/Weather_Dashboard.git",
-        features: ["Live weather API payload fetching operations", "Visual 5-day weather condition card dashboards", "Responsive styling supporting mobile HUD views"],
-        bgClass: "from-[#D4AF37]/25 via-[#181818] to-[#0B0B0B]",
-        visual: <CloudSun className="w-12 h-12 text-[#D4AF37] group-hover:scale-110 transition-transform duration-500" />,
-        featured: true,
-    },
-    {
-        title: "CETAA Website",
-        desc: "A responsive educational and renovation-themed website developed using HTML, CSS, and JavaScript. Focused on responsive layouts and clean UI design for alumni networkings.",
-        tech: ["HTML", "CSS", "JavaScript"],
-        git: "https://github.com/abhinand-ab/cetaa-website",
-        features: ["Renovation layout theme configuration", "Smooth UI navigation structures & elements styling", "HTML5 semantic page layouts for indexing"],
-        bgClass: "from-[#E8C547]/25 via-[#181818] to-[#0B0B0B]",
-        visual: <Award className="w-12 h-12 text-[#E8C547] group-hover:scale-110 transition-transform duration-500" />,
-        featured: true,
-    },
-    {
-        title: "Bus Reservation System",
-        desc: "Frontend bus booking system developed using HTML, CSS, and JavaScript. Includes booking confirmation, local storage handling, and interactive user interface features.",
-        tech: ["HTML", "CSS", "JavaScript", "Local Storage"],
-        git: "https://github.com/abhinand-ab/Bus-reservation",
-        features: ["Interactive seating grids choice representation", "Booking confirmations display status notifications", "Web browsers LocalStorage memory persistence"],
-        bgClass: "from-[#D4AF37]/25 via-[#181818] to-[#0B0B0B]",
-        visual: <Bus className="w-12 h-12 text-[#D4AF37] group-hover:scale-110 transition-transform duration-500" />,
-        featured: true,
     },
     {
         title: "Dhamani Backend",
-        desc: "Flask backend application with donor and recipient registration APIs, validation logic, SQLite database integration, and nearby donor mapping features.",
+        desc: "Flask REST microservice with donor registration validation logic, SQLite local data storage, and nearby donor distance calculation.",
         tech: ["Python", "Flask", "SQLite", "REST API"],
         git: "https://github.com/abhinand-ab/Dhamani-backend",
-        features: ["Flask endpoint structures and routing APIs", "SQLite local data structures management", "Donor matches mapping proximity distance utilities"],
-        bgClass: "from-[#E8C547]/25 via-[#181818] to-[#0B0B0B]",
-        visual: <Code2 className="w-12 h-12 text-[#E8C547] group-hover:scale-110 transition-transform duration-500" />,
-        featured: true,
+    },
+    {
+        title: "Bus Reservation System",
+        desc: "Front-end seat reservation interface with interactive grid layout, booking confirmations, and persistent browser storage.",
+        tech: ["HTML5", "CSS3", "JavaScript", "LocalStorage"],
+        git: "https://github.com/abhinand-ab/Bus-reservation",
+    },
+    {
+        title: "CETAA Alumni Website",
+        desc: "Responsive educational web platform for engineering alumni networking, chapter initiatives, and event announcements.",
+        tech: ["HTML5", "CSS3", "JavaScript"],
+        git: "https://github.com/abhinand-ab/cetaa-website",
     },
 ];
 
 export default function Projects() {
     return (
-        <section id="projects" className="py-28 px-6 bg-transparent relative overflow-hidden">
-            {/* Decorative Blob */}
-            <div className="absolute top-[40%] right-[-5%] w-[450px] h-[450px] bg-[#D4AF37]/1.5 rounded-full blur-[120px]" />
-            <div className="absolute bottom-[20%] left-[-5%] w-[450px] h-[450px] bg-[#E8C547]/1.2 rounded-full blur-[120px]" />
-
+        <section id="projects" className="py-20 px-6 bg-transparent relative">
             <div className="max-w-6xl mx-auto relative z-10">
 
                 {/* Section Heading */}
-                <div className="text-center mb-20">
-                    <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: "-100px" }}
-                        transition={{ duration: 0.5 }}
-                        className="text-xs font-semibold uppercase tracking-[0.25em] text-[#D4AF37] mb-3"
-                    >
-                        My Creations
-                    </motion.div>
-                    <motion.h2
-                        initial={{ opacity: 0, y: 15 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: "-100px" }}
-                        transition={{ duration: 0.5, delay: 0.1 }}
-                        className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-white via-[#F4D35E]/30 to-[#B5B5B5] bg-clip-text text-transparent"
-                    >
+                <div className="mb-12">
+                    <span className="text-xs font-mono text-[#D4AF37] block mb-2">
+                        Portfolio
+                    </span>
+                    <h2 className="text-2xl sm:text-3xl font-medium text-[#ededed]">
                         Featured Projects
-                    </motion.h2>
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true, margin: "-100px" }}
-                        transition={{ duration: 0.5, delay: 0.2 }}
-                        className="w-16 h-1 bg-gradient-to-r from-[#D4AF37] to-[#E8C547] mx-auto mt-4 rounded-full"
-                    />
+                    </h2>
                 </div>
 
-                {/* Projects Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                    {projectsData.map((project, idx) => (
+                {/* Tier 1: Featured Flagship Systems */}
+                <div className="space-y-6 mb-16">
+                    {featuredProjects.map((project, idx) => (
                         <motion.div
                             key={project.title}
-                            initial={{ opacity: 0, y: 40 }}
+                            initial={{ opacity: 0, y: 16 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-80px" }}
-                            transition={{ duration: 0.5, delay: (idx % 2) * 0.1 }}
-                            className="group border border-[rgba(212,175,55,0.15)] hover:border-[#D4AF37]/50 rounded-3xl overflow-hidden shadow-2xl glassmorphism flex flex-col justify-between h-full transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(212,175,55,0.18)]"
+                            transition={{ duration: 0.35, delay: idx * 0.05, ease: [0.22, 1, 0.36, 1] }}
+                            className="bg-[#19191b] hover:bg-[#222225] border border-[rgba(237,237,237,0.08)] hover:border-[rgba(237,237,237,0.18)] rounded-xl p-6 sm:p-7 transition-colors duration-150"
                         >
-
-                            {/* Project Image/Visual Visualizer Placeholder */}
-                            <div className={`relative h-48 w-full bg-gradient-to-br ${project.bgClass} flex items-center justify-center p-6 border-b border-[rgba(212,175,55,0.15)] overflow-hidden`}>
-                                {/* Visual grid bg pattern */}
-                                <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_100%,transparent_100%)] opacity-45" />
-
-                                {/* Orb blur glow */}
-                                <div className="absolute w-24 h-24 rounded-full bg-[#D4AF37]/5 blur-xl group-hover:scale-125 transition-transform duration-500" />
-
-                                {project.visual}
-
-                                {/* Star featured tag */}
-                                {project.featured && (
-                                    <div className="absolute top-4 right-4 flex items-center gap-1 bg-[#D4AF37] border border-transparent px-3 py-1 rounded-full text-[10px] font-bold text-[#0B0B0B] shadow-[#D4AF37]/20 hover:shadow-[0_0_10px_#D4AF37] transition-all backdrop-blur-md">
-                                        <Star className="w-3.5 h-3.5 fill-[#0B0B0B] text-[#0B0B0B]" />
-                                        Featured
+                            <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6">
+                                <div className="flex-1">
+                                    <div className="flex items-center gap-2.5 mb-2.5 flex-wrap">
+                                        <h3 className="text-lg sm:text-xl font-medium text-[#ededed]">
+                                            {project.title}
+                                        </h3>
+                                        <span className="text-[11px] font-mono text-[#D4AF37] bg-[#D4AF37]/10 px-2 py-0.5 rounded border border-[#D4AF37]/20">
+                                            {project.badge}
+                                        </span>
                                     </div>
-                                )}
-                            </div>
 
-                            {/* Card Details */}
-                            <div className="p-8 flex flex-col flex-grow">
-                                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#D4AF37] transition-colors">
-                                    {project.title}
-                                </h3>
+                                    <p className="text-sm text-[#a1a1a6] leading-relaxed mb-4 max-w-3xl">
+                                        {project.desc}
+                                    </p>
 
-                                <p className="text-slate-400 text-sm leading-relaxed mb-6 font-sans">
-                                    {project.desc}
-                                </p>
-
-                                {/* Key Features Bullet list */}
-                                <div className="mb-6 flex-grow">
-                                    <h4 className="text-white text-xs font-semibold uppercase tracking-wider mb-2">Key Features</h4>
-                                    <ul className="list-disc pl-4 text-xs text-slate-400 space-y-1">
-                                        {project.features.map((feature, index) => (
-                                            <li key={index} className="font-sans leading-relaxed">
-                                                {feature}
+                                    {/* Architectural features */}
+                                    <ul className="space-y-1.5 mb-5 text-xs text-[#a1a1a6]">
+                                        {project.features.map((feature, i) => (
+                                            <li key={i} className="flex items-start gap-2">
+                                                <span className="text-[#D4AF37] mt-0.5 font-mono">›</span>
+                                                <span>{feature}</span>
                                             </li>
                                         ))}
                                     </ul>
+
+                                    {/* Tech tags */}
+                                    <div className="flex flex-wrap gap-1.5 mb-6">
+                                        {project.tech.map((t) => (
+                                            <span
+                                                key={t}
+                                                className="px-2.5 py-1 bg-[#0f0f10] border border-[rgba(237,237,237,0.06)] text-[#a1a1a6] font-mono text-[11px] rounded"
+                                            >
+                                                {t}
+                                            </span>
+                                        ))}
+                                    </div>
                                 </div>
 
-                                {/* Tech Badges */}
-                                <div className="flex flex-wrap gap-2 mb-8">
-                                    {project.tech.map((t) => (
-                                        <span
-                                            key={t}
-                                            className="px-3 py-1.5 bg-[#121212] hover:bg-[#181818] border border-[rgba(212,175,55,0.35)] hover:border-[#D4AF37] text-[#D4AF37] hover:text-[#F8F8F8] font-mono text-[10px] rounded-md transition-all duration-300 cursor-default"
-                                        >
-                                            {t}
-                                        </span>
-                                    ))}
-                                </div>
-
-                                {/* Links Buttons */}
-                                <div className="flex items-center gap-4 mt-auto pt-4 border-t border-[rgba(212,175,55,0.15)]">
+                                {/* Project Action Links */}
+                                <div className="flex sm:flex-col gap-2 shrink-0">
                                     {project.live && (
                                         <a
                                             href={project.live}
                                             target="_blank"
                                             rel="noreferrer"
-                                            className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 bg-gradient-to-r from-[#D4AF37] to-[#E8C547] hover:brightness-110 text-[#0B0B0B] rounded-xl text-xs font-semibold shadow-md shadow-[#D4AF37]/15 hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] group/btn transition-all cursor-pointer"
+                                            className="inline-flex items-center justify-center gap-1.5 px-4 py-2 bg-[#D4AF37] hover:bg-[#e0bc45] text-[#0f0f10] rounded-lg text-xs font-medium transition-colors duration-150"
                                         >
                                             Live Demo
-                                            <ExternalLink className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+                                            <ExternalLink className="w-3.5 h-3.5" />
                                         </a>
                                     )}
-
                                     <a
                                         href={project.git}
                                         target="_blank"
                                         rel="noreferrer"
-                                        className={`inline-flex items-center justify-center gap-2 px-5 py-3 bg-transparent hover:bg-[#D4AF37]/10 text-white border border-[#D4AF37]/40 hover:border-[#D4AF37] hover:shadow-[0_0_12px_rgba(212,175,55,0.2)] rounded-xl text-xs font-semibold transition-all cursor-pointer ${project.live ? "w-[40%]" : "flex-1"
-                                            }`}
+                                        className="inline-flex items-center justify-center gap-1.5 px-4 py-2 bg-[#19191b] hover:bg-[#222225] border border-[rgba(237,237,237,0.12)] hover:border-[rgba(237,237,237,0.22)] text-[#ededed] rounded-lg text-xs font-medium transition-colors duration-150"
                                     >
-                                        <GitHub className="w-4 h-4" />
-                                        GitHub
+                                        <GitHub className="w-3.5 h-3.5" />
+                                        Repository
                                     </a>
                                 </div>
-
                             </div>
-
                         </motion.div>
                     ))}
+                </div>
+
+                {/* Tier 2: Additional Software Engineering Projects */}
+                <div className="mb-6">
+                    <h3 className="text-sm font-medium text-[#a1a1a6] uppercase tracking-wider font-mono mb-4">
+                        Additional Software Projects
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {otherProjects.map((project, idx) => (
+                            <motion.div
+                                key={project.title}
+                                initial={{ opacity: 0, y: 12 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-60px" }}
+                                transition={{ duration: 0.3, delay: (idx % 2) * 0.05, ease: [0.22, 1, 0.36, 1] }}
+                                className="bg-[#19191b] hover:bg-[#222225] border border-[rgba(237,237,237,0.08)] hover:border-[rgba(237,237,237,0.18)] rounded-xl p-5 transition-colors duration-150 flex flex-col justify-between"
+                            >
+                                <div>
+                                    <div className="flex items-start justify-between gap-3 mb-2">
+                                        <h4 className="text-sm font-medium text-[#ededed]">
+                                            {project.title}
+                                        </h4>
+                                        <div className="flex items-center gap-2 shrink-0">
+                                            {project.live && (
+                                                <a
+                                                    href={project.live}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className="text-[#a1a1a6] hover:text-[#D4AF37] transition-colors p-1"
+                                                    title="Live Demo"
+                                                >
+                                                    <ExternalLink className="w-3.5 h-3.5" />
+                                                </a>
+                                            )}
+                                            <a
+                                                href={project.git}
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                className="text-[#a1a1a6] hover:text-[#ededed] transition-colors p-1"
+                                                title="GitHub Repository"
+                                            >
+                                                <GitHub className="w-3.5 h-3.5" />
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <p className="text-xs text-[#a1a1a6] leading-relaxed mb-4">
+                                        {project.desc}
+                                    </p>
+                                </div>
+
+                                <div className="flex flex-wrap gap-1 pt-3 border-t border-[rgba(237,237,237,0.06)]">
+                                    {project.tech.map((t) => (
+                                        <span
+                                            key={t}
+                                            className="px-2 py-0.5 bg-[#0f0f10] text-[#71717a] font-mono text-[10px] rounded"
+                                        >
+                                            {t}
+                                        </span>
+                                    ))}
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
 
             </div>

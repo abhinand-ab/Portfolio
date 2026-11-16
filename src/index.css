@@ -1,60 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --radius: 0.75rem;
+  --background: #141415;
+  --surface-deep: #0f0f10;
+  --surface-card: #19191b;
+  --surface-raised: #222225;
+  
+  --foreground: #ededed;
+  --foreground-secondary: #a1a1a6;
+  --foreground-muted: #71717a;
 
-  /* Luxury Obsidian & Gold theme */
-  --background: #0B0B0B;
-  --foreground: #F8F8F8;
-
-  --card: rgba(24, 24, 24, 0.75);
-  --card-foreground: #F8F8F8;
-
-  --muted: #121212;
-  --muted-foreground: #B5B5B5;
-
-  --primary: #D4AF37;
-  --primary-foreground: #0B0B0B;
-
-  --accent: #E8C547;
-  --accent-foreground: #0B0B0B;
-
-  --border: rgba(212, 175, 55, 0.15);
-
-  --gradient-hero:
-    radial-gradient(circle at 50% 0%,
-      rgba(212, 175, 55, 0.05),
-      #0B0B0B 75%),
-    linear-gradient(180deg,
-      #0B0B0B 0%,
-      #121212 100%);
-
-  --gradient-text:
-    linear-gradient(135deg,
-      #F8F8F8 30%,
-      #D4AF37 100%);
-
-  --shadow-glow:
-    0 15px 45px -15px rgba(212, 175, 55, 0.25);
-
-  --shadow-card:
-    0 10px 40px -10px rgba(0, 0, 0, 0.95),
-    inset 0 1px 1px rgba(255, 255, 255, 0.03);
+  --accent: #D4AF37;
+  --accent-muted: rgba(212, 175, 55, 0.15);
+  
+  --hairline: rgba(237, 237, 237, 0.08);
+  --hairline-strong: rgba(237, 237, 237, 0.14);
 }
 
 ::selection {
   background-color: #D4AF37;
-  color: #0B0B0B;
-}
-
-/* BASE */
-
-* {
-  border-color: var(--border);
+  color: #0f0f10;
 }
 
 html {
@@ -64,165 +33,32 @@ html {
 
 body {
   margin: 0;
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
 
-/* Custom Webkit scrollbar for premium feel */
+code, pre, .font-mono {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Quiet, minimal scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0B0B0B;
+  background: #0f0f10;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #D4AF37;
-  border-radius: 4px;
+  background: #2a2a2e;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #E8C547;
-}
-
-/* CUSTOM UTILITIES */
-
-.text-gradient {
-  background: var(--gradient-text);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.bg-hero {
-  background: var(--gradient-hero);
-}
-
-.shadow-glow {
-  box-shadow: var(--shadow-glow);
-}
-
-.shadow-card {
-  box-shadow: var(--shadow-card);
-}
-
-.glassmorphism {
-  background: rgba(24, 24, 24, 0.75);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(212, 175, 55, 0.15);
-  box-shadow:
-    inset 0 1px 1px rgba(255, 255, 255, 0.02),
-    0 10px 30px -10px rgba(0, 0, 0, 0.75);
-}
-
-.grain {
-  position: relative;
-}
-
-.grain::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background-image:
-    radial-gradient(rgba(255, 255, 255, 0.01) 1px,
-      transparent 1px);
-  background-size: 4px 4px;
-  mix-blend-mode: overlay;
-}
-
-/* Animations */
-@keyframes spin-slow {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.animate-spin-slow {
-  animation: spin-slow 25s linear infinite;
-}
-
-@keyframes pulse-slow {
-
-  0%,
-  100% {
-    opacity: 0.25;
-    transform: scale(1);
-  }
-
-  50% {
-    opacity: 0.45;
-    transform: scale(1.03);
-  }
-}
-
-.animate-pulse-slow {
-  animation: pulse-slow 8s ease-in-out infinite;
-}
-
-@keyframes orbit-cw {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes orbit-ccw {
-  0% {
-    transform: rotate(360deg);
-  }
-
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-.animate-orbit-cw {
-  animation: orbit-cw 30s linear infinite;
-}
-
-.animate-orbit-ccw {
-  animation: orbit-ccw 20s linear infinite;
-}
-
-/* Responsive scaling for hero orbit illustration to prevent clipping below 1200px */
-@media (max-width: 1200px) and (min-width: 1024px) {
-  .hero-visual-wrapper {
-    transform: scale(0.85);
-    transform-origin: center;
-  }
-}
-
-@media (max-width: 1023px) and (min-width: 768px) {
-  .hero-visual-wrapper {
-    transform: scale(0.9);
-    transform-origin: center;
-  }
-}
-
-@media (max-width: 767px) and (min-width: 480px) {
-  .hero-visual-wrapper {
-    transform: scale(0.85);
-    transform-origin: center;
-  }
-}
-
-@media (max-width: 479px) {
-  .hero-visual-wrapper {
-    transform: scale(0.72);
-    transform-origin: center;
-  }
+  background: #3f3f46;
 }
